@@ -25,6 +25,7 @@
 
 .animate-lift:hover {
   transform: translateY(-4px);
+  box-shadow: 0 18px 42px rgba(15, 23, 42, 0.12);
 }
 
 .animate-sheen {
@@ -65,6 +66,26 @@
   }
 }
 
+@keyframes bg-sweep {
+  0% {
+    background-position: 0% 0%, 100% 0%, 0% 100%, 100% 100%;
+  }
+
+  100% {
+    background-position: 100% 100%, 0% 100%, 100% 0%, 0% 0%;
+  }
+}
+
+@keyframes grid-drift {
+  0% {
+    background-position: 0 0, 0 0, 0 0, 0 0;
+  }
+
+  100% {
+    background-position: 38px 38px, -38px -38px, 168px 168px, -224px -224px;
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
   .animate-rise,
   .animate-rise-delay,
@@ -74,6 +95,12 @@
   .animate-lift {
     animation: none !important;
     transition: none !important;
+  }
+
+  body,
+  .page-grid,
+  .site-ambient {
+    animation: none !important;
   }
 
   html {

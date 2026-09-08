@@ -2,7 +2,7 @@ import React from "react";
 
 const Footer = () => {
   return (
-    <footer className="animate-rise border-t border-[#E2E8F0] bg-surface px-6 py-10 text-[#0F172A] sm:px-10">
+    <footer className="animate-rise border-t border-brand/15 bg-[linear-gradient(180deg,rgba(251,254,254,0.86),rgba(238,245,244,0.9))] px-6 py-10 text-[#0F172A] sm:px-10 backdrop-blur-sm">
       <div className="mx-auto grid max-w-7xl gap-8 sm:grid-cols-2 lg:grid-cols-4 lg:gap-12">
 
         {/* Brand */}
@@ -25,7 +25,7 @@ const Footer = () => {
             delivery.
           </p>
 
-          <span className="mt-4 inline-flex rounded-full border border-[#86EFAC] bg-white px-3 py-1.5 text-[10px] font-semibold text-[#15803D]">
+          <span className="mt-4 inline-flex rounded-full border border-brand/15 bg-[linear-gradient(135deg,rgba(230,255,251,0.95),rgba(232,241,255,0.95),rgba(255,246,232,0.92))] px-3 py-1.5 text-[10px] font-semibold text-brand-strong shadow-sm">
             ✓ Verified Pharmacy
           </span>
         </section>
@@ -105,7 +105,7 @@ const Footer = () => {
       </div>
 
       {/* Bottom Bar */}
-      <div className="mx-auto mt-10 flex max-w-7xl flex-col gap-4 border-t border-[#D1FAE5] pt-5 text-[11px] text-[#64748B] sm:flex-row sm:items-center sm:justify-between">
+      <div className="mx-auto mt-10 flex max-w-7xl flex-col gap-4 border-t border-[#d8e4e1] pt-5 text-[11px] text-[#64748B] sm:flex-row sm:items-center sm:justify-between">
 
         <div className="space-y-1">
           <p>
@@ -125,15 +125,15 @@ const Footer = () => {
           className="flex flex-wrap gap-x-5 gap-y-2"
           aria-label="Footer navigation"
         >
-          <a href="#privacy" className="hover:text-brand">
+          <a href="#privacy" className="transition hover:text-brand">
             Privacy Policy
           </a>
 
-          <a href="#terms" className="hover:text-brand">
+          <a href="#terms" className="transition hover:text-brand">
             Terms of Service
           </a>
 
-          <a href="#safety" className="hover:text-brand">
+          <a href="#safety" className="transition hover:text-brand">
             Safety Guidelines
           </a>
         </nav>

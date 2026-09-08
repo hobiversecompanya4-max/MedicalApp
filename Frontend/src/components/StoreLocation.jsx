@@ -6,15 +6,15 @@ const StoreLocation = () => {
   return (
     <section
       id="location"
-      className="bg-[#F8FAFC] px-5 py-14 sm:px-6 sm:py-16 animate-rise"
+      className="bg-[linear-gradient(180deg,rgba(247,251,250,0.82),rgba(238,246,244,0.78))] px-5 py-14 sm:px-6 sm:py-16 animate-rise backdrop-blur-sm"
     >
       <div className="mx-auto max-w-[1200px]">
         <div className="grid items-center gap-8 md:grid-cols-2 md:gap-12">
 
           {/* Store Information */}
           <div className="animate-rise">
-            <p className="mb-2 text-[10px] font-bold uppercase tracking-[0.12em] text-brand">
-              📍 VISIT OUR STORE
+            <p className="mb-2 inline-flex items-center gap-2 rounded-full border border-brand/15 bg-[linear-gradient(135deg,rgba(230,255,251,0.95),rgba(232,241,255,0.95),rgba(255,246,232,0.92))] px-4 py-2 text-[10px] font-bold uppercase tracking-[0.16em] text-brand-strong shadow-sm">
+              📍 Visit our store
             </p>
 
             <h2 className="font-[Plus_Jakarta_Sans] text-[28px] font-semibold leading-tight tracking-[-0.5px] text-[#0F172A] sm:text-[34px]">
@@ -28,8 +28,8 @@ const StoreLocation = () => {
             </p>
 
             <div className="mt-6 space-y-3">
-              <div className="animate-lift flex items-start gap-3 rounded-xl border border-[#E2E8F0] bg-white p-4">
-                <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-brand-soft text-lg text-brand">
+              <div className="animate-lift flex items-start gap-3 rounded-2xl border border-[#dbe7e4] bg-white/90 p-4 shadow-[0_1px_3px_rgba(15,23,42,0.04)] backdrop-blur-sm">
+                <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-2xl bg-brand-soft text-lg text-brand-strong">
                   📍
                 </div>
 
@@ -45,8 +45,8 @@ const StoreLocation = () => {
                 </div>
               </div>
 
-              <div className="animate-lift flex items-start gap-3 rounded-xl border border-[#E2E8F0] bg-white p-4">
-                <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-brand-soft-2 text-lg text-brand">
+              <div className="animate-lift flex items-start gap-3 rounded-2xl border border-[#dbe7e4] bg-white/90 p-4 shadow-[0_1px_3px_rgba(15,23,42,0.04)] backdrop-blur-sm">
+                <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-2xl bg-sky-soft text-lg text-sky">
                   🕐
                 </div>
 
@@ -75,8 +75,8 @@ const StoreLocation = () => {
           </div>
 
           {/* Map Card */}
-          <div className="animate-rise-delay animate-lift overflow-hidden rounded-2xl border border-[#E2E8F0] bg-white p-2 shadow-[0_10px_30px_rgba(15,23,42,0.06)]">
-            <div className="relative flex min-h-[320px] items-center justify-center overflow-hidden rounded-xl bg-[#E8F0EC]">
+          <div className="animate-rise-delay animate-lift overflow-hidden rounded-[28px] border border-[#dbe7e4] bg-white/90 p-2 shadow-[0_18px_45px_rgba(15,23,42,0.08)] backdrop-blur-sm">
+            <div className="relative flex min-h-[320px] items-center justify-center overflow-hidden rounded-[22px] bg-[linear-gradient(180deg,rgba(233,242,239,0.98),rgba(238,246,255,0.92),rgba(255,246,232,0.9))]">
 
               {/* Decorative map background */}
               <div className="absolute inset-0 opacity-60">
@@ -94,7 +94,7 @@ const StoreLocation = () => {
                   📍
                 </div>
 
-                <div className="animate-lift mt-3 rounded-lg border border-[#E2E8F0] bg-white px-4 py-2 text-center shadow-md">
+                <div className="animate-lift mt-3 rounded-2xl border border-[#dbe7e4] bg-white/95 px-4 py-3 text-center shadow-md backdrop-blur-sm">
                   <p className="text-xs font-bold text-[#0F172A]">
                     Panchawati Meds Medical Store
                   </p>
@@ -108,7 +108,7 @@ const StoreLocation = () => {
                 href={STORE_MAP_URL}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="animate-lift absolute bottom-4 right-4 z-10 rounded-lg bg-white px-3 py-2 text-xs font-semibold text-brand shadow-md transition hover:bg-brand-soft"
+                className="animate-lift absolute bottom-4 right-4 z-10 rounded-full border border-white/70 bg-white/95 px-4 py-2 text-xs font-semibold text-brand-strong shadow-md transition hover:bg-brand-soft"
               >
                 Open Map ↗
               </a>

@@ -1,24 +1,85 @@
 import React from "react";
 
+const celebrationTags = [
+  { label: "Weddings", tone: "bg-brand-soft text-brand-strong" },
+  { label: "Receptions", tone: "bg-sky-soft text-sky" },
+  { label: "Birthday celebrations", tone: "bg-brand-soft text-brand-strong" },
+  { label: "Family gatherings", tone: "bg-sky-soft text-sky" },
+];
+
+const strengths = [
+  {
+    title: "Spacious",
+    description:
+      "A comfortable venue backdrop for larger gatherings, dining layouts, and smooth guest flow.",
+    accent: "rgba(15, 118, 110, 0.34)",
+    chip: "bg-brand-soft text-brand-strong",
+  },
+  {
+    title: "Flexible",
+    description:
+      "Suitable for ceremonial moments, festive programs, and thoughtful event arrangements.",
+    accent: "rgba(59, 130, 246, 0.32)",
+    chip: "bg-sky-soft text-sky",
+  },
+  {
+    title: "Memorable",
+    description:
+      "Built for celebrations that feel calm, polished, and easy to enjoy from start to finish.",
+    accent: "rgba(15, 118, 110, 0.34)",
+    chip: "bg-brand-soft text-brand-strong",
+  },
+];
+
+const occasions = [
+  {
+    title: "Marriages and ceremonies",
+    description:
+      "A refined setting for family milestones that deserve elegance and room to breathe.",
+    tone: "bg-brand-soft",
+    text: "text-brand-strong",
+    accent: "rgba(15, 118, 110, 0.34)",
+  },
+  {
+    title: "Parties and receptions",
+    description:
+      "A dependable option for joyful gatherings that need space, flow, and a welcoming atmosphere.",
+    tone: "bg-sky-soft",
+    text: "text-sky",
+    accent: "rgba(59, 130, 246, 0.32)",
+  },
+  {
+    title: "Festive occasions",
+    description:
+      "Ideal for cultural events, seasonal functions, and special get-togethers with a polished feel.",
+    tone: "bg-brand-soft",
+    text: "text-brand-strong",
+    accent: "rgba(15, 118, 110, 0.34)",
+  },
+];
+
 const OtherPartners = () => {
   return (
-    <section className="bg-white px-5 py-16 sm:px-6 sm:py-20 animate-rise">
+    <section className="bg-[linear-gradient(180deg,rgba(251,254,254,0.88),rgba(244,249,255,0.9))] px-5 py-16 sm:px-6 sm:py-20 animate-rise backdrop-blur-sm">
       <div className="mx-auto max-w-[1120px]">
         <div className="animate-rise mb-5 flex items-center gap-3">
-          <span className="text-[10px] font-bold uppercase tracking-[0.16em] text-brand">
+          <span className="text-[10px] font-bold uppercase tracking-[0.16em] text-brand-strong">
             OTHER PARTNERS
           </span>
-          <span className="h-px flex-1 bg-[#E2E8F0]" />
-          <span className="text-[10px] text-[#94A3B8]">
+          <span className="h-px flex-1 bg-[linear-gradient(90deg,rgba(15,118,110,0.18),rgba(59,130,246,0.18))]" />
+          <span className="text-[10px] text-[#64748B]">
             Community collaborations we value
           </span>
         </div>
 
-        <div className="animate-rise animate-lift overflow-hidden rounded-2xl border border-[#E2E8F0] bg-[#F8FAFC] shadow-[0_12px_30px_rgba(15,23,42,0.05)]" style={{ animationDelay: "100ms" }}>
-          <div className="grid gap-0 md:grid-cols-[1.15fr_.85fr]">
+        <div
+          className="animate-rise animate-lift overflow-hidden rounded-[28px] border border-[#dbe7e4] bg-white/90 shadow-[0_12px_30px_rgba(15,23,42,0.05)] backdrop-blur-sm"
+          style={{ animationDelay: "100ms" }}
+        >
+          <div className="grid gap-0 md:grid-cols-[1.08fr_.92fr]">
             <div className="p-6 sm:p-8 lg:p-10">
-              <p className="text-[10px] font-bold uppercase tracking-[0.16em] text-brand">
-                Celebration Venue Partner
+              <p className="inline-flex rounded-full bg-[linear-gradient(135deg,rgba(230,255,251,0.95),rgba(232,241,255,0.95))] px-3 py-1.5 text-[10px] font-bold uppercase tracking-[0.16em] text-brand-strong">
+                Celebration venue partner
               </p>
 
               <h2 className="mt-3 font-[Plus_Jakarta_Sans] text-[30px] font-semibold leading-tight tracking-[-0.5px] text-[#0F172A] sm:text-[36px]">
@@ -27,104 +88,72 @@ const OtherPartners = () => {
 
               <p className="mt-4 max-w-[700px] text-sm leading-7 text-[#475569] sm:text-[15px]">
                 For parties, marriages, and any celebration, Panchwati Lawn
-                brings a spacious and welcoming setting for the moments that
-                matter most. It is a fitting choice when you want an event
-                space that feels comfortable, memorable, and ready for guests.
+                offers a generous setting with a soft, welcoming feel. It suits
+                occasions that need comfort, movement, and a polished backdrop
+                without visual clutter.
               </p>
 
               <div className="mt-6 flex flex-wrap gap-2">
-                {[
-                  "Weddings",
-                  "Receptions",
-                  "Birthday celebrations",
-                  "Family gatherings",
-                ].map((item) => (
+                {celebrationTags.map((item) => (
                   <span
-                    key={item}
-                    className="animate-lift rounded-full border border-[#D7E3E0] bg-white px-3 py-1.5 text-xs font-semibold text-[#0F172A]"
+                    key={item.label}
+                    className={`animate-lift rounded-full border border-[#dbe7e4] px-3 py-1.5 text-xs font-semibold ${item.tone}`}
                   >
-                    {item}
+                    {item.label}
                   </span>
                 ))}
               </div>
 
               <div className="mt-8 grid gap-3 sm:grid-cols-3">
-                <div className="animate-lift rounded-xl border border-[#E2E8F0] bg-white p-4">
-                  <div className="text-[11px] font-bold uppercase tracking-[0.12em] text-brand">
-                    Spacious
-                  </div>
-                  <p className="mt-2 text-sm leading-6 text-[#475569]">
-                    A comfortable venue backdrop for larger gatherings and
-                    lively celebrations.
-                  </p>
-                </div>
+                {strengths.map((item) => (
+                  <div
+                    key={item.title}
+                    className="animate-lift rounded-2xl border border-[#dbe7e4] bg-white/95 p-4 shadow-[0_1px_3px_rgba(15,23,42,0.04)]"
+                    style={{ borderLeft: `4px solid ${item.accent}` }}
+                  >
+                    <div
+                      className={`inline-flex rounded-full px-3 py-1 text-[11px] font-bold uppercase tracking-[0.12em] ${item.chip}`}
+                    >
+                      {item.title}
+                    </div>
 
-                <div className="animate-lift rounded-xl border border-[#E2E8F0] bg-white p-4">
-                  <div className="text-[11px] font-bold uppercase tracking-[0.12em] text-brand">
-                    Flexible
+                    <p className="mt-3 text-sm leading-6 text-[#475569]">
+                      {item.description}
+                    </p>
                   </div>
-                  <p className="mt-2 text-sm leading-6 text-[#475569]">
-                    Suitable for ceremonial moments, dining setups, and festive
-                    arrangements.
-                  </p>
-                </div>
-
-                <div className="animate-lift rounded-xl border border-[#E2E8F0] bg-white p-4">
-                  <div className="text-[11px] font-bold uppercase tracking-[0.12em] text-brand">
-                    Memorable
-                  </div>
-                  <p className="mt-2 text-sm leading-6 text-[#475569]">
-                    Designed for celebrations that feel warm, polished, and
-                    easy to enjoy.
-                  </p>
-                </div>
+                ))}
               </div>
             </div>
 
-            <div className="animate-rise-delay bg-[#0F172A] p-6 text-white sm:p-8 lg:p-10">
-              <p className="text-[10px] font-bold uppercase tracking-[0.16em] text-[#7DD3FC]">
+            <div className="bg-[linear-gradient(180deg,rgba(230,255,251,0.92),rgba(232,241,255,0.92))] p-6 text-[#0F172A] sm:p-8 lg:p-10">
+              <p className="text-[10px] font-bold uppercase tracking-[0.16em] text-brand-strong">
                 Best for
               </p>
 
               <div className="mt-5 space-y-4">
-                {[
-                  {
-                    title: "Marriages and ceremonies",
-                    description:
-                      "A refined setting for the most important family milestones.",
-                  },
-                  {
-                    title: "Parties and receptions",
-                    description:
-                      "A good fit for joyful gatherings that need room to celebrate comfortably.",
-                  },
-                  {
-                    title: "Festive occasions",
-                    description:
-                      "Ideal for cultural events, seasonal functions, and special get-togethers.",
-                  },
-                ].map((item) => (
+                {occasions.map((item) => (
                   <div
                     key={item.title}
-                    className="rounded-xl border border-white/10 bg-white/5 p-4"
+                    className="rounded-2xl border border-white/80 bg-white/85 p-4 shadow-[0_1px_3px_rgba(15,23,42,0.04)] backdrop-blur-sm"
+                    style={{ borderLeft: `4px solid ${item.accent}` }}
                   >
-                    <h3 className="text-sm font-semibold text-white">
+                    <h3 className={`text-sm font-semibold ${item.text}`}>
                       {item.title}
                     </h3>
-                    <p className="mt-1 text-sm leading-6 text-slate-300">
+                    <p className="mt-1 text-sm leading-6 text-[#475569]">
                       {item.description}
                     </p>
                   </div>
                 ))}
               </div>
 
-              <div className="mt-6 rounded-xl border border-[#0EA5E9]/25 bg-[#0B1220] p-4">
-                <p className="text-xs font-semibold uppercase tracking-[0.12em] text-[#7DD3FC]">
+              <div className="mt-6 rounded-2xl border border-white/80 bg-[linear-gradient(135deg,rgba(230,255,251,0.95),rgba(232,241,255,0.95))] p-4 shadow-sm">
+                <p className="text-xs font-semibold uppercase tracking-[0.12em] text-brand-strong">
                   In one line
                 </p>
-                <p className="mt-2 text-sm leading-6 text-slate-200">
+                <p className="mt-2 text-sm leading-6 text-[#475569]">
                   A dependable venue partner for celebrations that deserve a
-                  little more space, style, and ease.
+                  little more space, softness, and ease.
                 </p>
               </div>
             </div>

@@ -1,144 +1,204 @@
 import React from "react";
+import {
+  ArrowRight,
+  Clock3,
+  PackageCheck,
+  PhoneCall,
+  ShieldCheck,
+  Sparkles,
+  Truck,
+} from "lucide-react";
 import { useNavigate } from "react-router-dom";
+
+const highlights = [
+  {
+    icon: ShieldCheck,
+    title: "Pharmacist verified",
+    copy: "Every prescription is reviewed before dispatch.",
+    tone: "bg-brand-soft",
+    textTone: "text-brand-strong",
+  },
+  {
+    icon: Truck,
+    title: "Free delivery",
+    copy: "Available within a 5 km local delivery zone.",
+    tone: "bg-sky-soft",
+    textTone: "text-sky",
+  },
+  {
+    icon: Clock3,
+    title: "Fast turnaround",
+    copy: "Built for same-day local order handling.",
+    tone: "bg-amber-soft",
+    textTone: "text-amber",
+  },
+  {
+    icon: PackageCheck,
+    title: "Secure packaging",
+    copy: "Tamper-evident, carefully packed medicines.",
+    tone: "bg-violet-soft",
+    textTone: "text-violet",
+  },
+];
 
 const Herosection = () => {
   const navigate = useNavigate();
 
   return (
-    <section className="overflow-hidden bg-surface px-5 py-8 font-[Inter] sm:px-[5%] sm:py-12">
-      <div className="mx-auto grid max-w-[1320px] grid-cols-1 items-center gap-10 lg:grid-cols-[1.08fr_.92fr] lg:gap-14">
+    <section className="relative overflow-hidden bg-[linear-gradient(180deg,rgba(251,254,254,0.92)_0%,rgba(245,251,249,0.82)_58%,rgba(238,244,251,0.88)_100%)] px-5 py-10 sm:px-[5%] sm:py-14 backdrop-blur-sm lg:min-h-[calc(100svh-88px)] lg:py-12">
+      <div
+        aria-hidden="true"
+        className="pointer-events-none absolute inset-x-0 top-0 h-72 bg-[linear-gradient(135deg,rgba(15,118,110,0.12),rgba(59,130,246,0.07),rgba(255,255,255,0))]"
+      />
 
+      <div
+        aria-hidden="true"
+        className="pointer-events-none absolute inset-x-0 bottom-0 h-32 bg-[repeating-linear-gradient(135deg,rgba(15,118,110,0.03)_0_1px,transparent_1px_34px)] opacity-70 animate-sheen"
+      />
+
+      <div className="relative mx-auto grid max-w-[1540px] grid-cols-1 items-center gap-10 lg:min-h-[calc(100svh-176px)] lg:grid-cols-[1.02fr_.98fr] lg:items-stretch lg:gap-16 xl:gap-20">
         {/* LEFT CONTENT */}
-        <div>
-
-          {/* Badge */}
-          <div className="animate-rise animate-lift mb-5 inline-flex items-center rounded-full bg-brand-soft px-4 py-2 text-[11px] font-bold uppercase tracking-wide text-brand">
-            ⚡ Express Digital Pharmacy Network
-            <span className="mx-2 text-[#94A3B8]">|</span>
-            <span className="text-[var(--text)]">
-              2-Hour Rapid Delivery Available
-            </span>
+        <div className="relative z-10 lg:flex lg:flex-col lg:justify-center lg:py-6 xl:py-10">
+          <div className="animate-rise animate-lift mb-5 inline-flex items-center gap-2 rounded-full border border-brand/15 bg-[linear-gradient(135deg,rgba(230,255,251,0.92),rgba(232,241,255,0.92),rgba(255,246,232,0.92))] px-4 py-2 text-[11px] font-bold uppercase tracking-[0.16em] text-brand-strong shadow-sm backdrop-blur">
+            <Sparkles size={14} className="text-brand" />
+            Trusted digital pharmacy
+            <span className="mx-1 text-[#94A3B8]">|</span>
+            <span className="text-[var(--text)]">Free delivery within 5 km</span>
           </div>
 
-          {/* Heading */}
-          <h1 className="animate-rise mb-4 font-[Plus_Jakarta_Sans] text-[clamp(34px,4.2vw,58px)] font-bold leading-[1.08] tracking-[-1.5px] text-[#0F172A]" style={{ animationDelay: "90ms" }}>
-            Genuine Medicines Delivered
+          <h1
+            className="animate-rise max-w-[12ch] font-[Plus_Jakarta_Sans] text-[clamp(36px,4.3vw,62px)] font-extrabold leading-[1.03] tracking-[-1.8px] text-[#0F172A]"
+            style={{ animationDelay: "90ms" }}
+          >
+            Genuine medicines
             <br />
-            to Your{" "}
-            <span className="text-brand">
-              Doorstep in 2 Hours
-            </span>
+            delivered with{" "}
+            <span className="text-brand">care</span>
           </h1>
 
-          {/* Description */}
-          <p className="animate-rise mb-7 max-w-[600px] text-[15px] leading-7 text-[var(--text)]" style={{ animationDelay: "150ms" }}>
-            Easily order 100% certified prescription drugs and OTC healthcare
-            supplies with your doctor's prescription.
+          <p
+            className="animate-rise mt-5 max-w-[620px] text-[15px] leading-7 text-[var(--text)] sm:text-[16px]"
+            style={{ animationDelay: "150ms" }}
+          >
+            Upload your prescription, let our pharmacists verify it, and get
+            clean, reliable medicine delivery in a calm, professional
+            experience designed around trust.
           </p>
 
-          {/* Trust Cards */}
-          <div className="mb-7 grid grid-cols-2 gap-3 sm:grid-cols-4">
+          <div className="mt-7 grid grid-cols-1 gap-3 sm:grid-cols-2">
+            {highlights.map((item, index) => {
+              const Icon = item.icon
 
-            <div className="animate-rise animate-lift rounded-xl border border-[#E2E8F0] bg-white p-3 shadow-[0_1px_3px_rgba(15,23,42,0.04)]" style={{ animationDelay: "220ms" }}>
-              <div className="mb-2 text-xl text-brand">✓</div>
-              <strong className="mb-1 block text-[11px] font-semibold text-[#0F172A]">
-                100% Genuine
-              </strong>
-              <small className="text-[9px] leading-4 text-[var(--text)]">
-                FDA-Certified Sourcing
-              </small>
-            </div>
+              return (
+                <div
+                  key={item.title}
+                  className="animate-rise animate-lift rounded-2xl border border-white/80 bg-white/92 p-4 shadow-[0_1px_3px_rgba(15,23,42,0.04)] backdrop-blur"
+                  style={{ animationDelay: `${index * 90 + 220}ms` }}
+                >
+                  <div className={`mb-3 inline-flex h-10 w-10 items-center justify-center rounded-2xl ${item.tone} ${item.textTone}`}>
+                    <Icon size={18} />
+                  </div>
 
-            <div className="animate-rise animate-lift rounded-xl border border-[#E2E8F0] bg-white p-3 shadow-[0_1px_3px_rgba(15,23,42,0.04)]" style={{ animationDelay: "300ms" }}>
-              <div className="mb-2 text-xl text-brand">✓</div>
-              <strong className="mb-1 block text-[11px] font-semibold text-[#0F172A]">
-                Rx Verified
-              </strong>
-              <small className="text-[9px] leading-4 text-[var(--text)]">
-                Dual-Pharmacist Check
-              </small>
-            </div>
+                  <div className={`mb-3 h-1.5 w-14 rounded-full ${item.tone}`} />
 
-            <div className="animate-rise animate-lift rounded-xl border border-[#E2E8F0] bg-white p-3 shadow-[0_1px_3px_rgba(15,23,42,0.04)]" style={{ animationDelay: "380ms" }}>
-              <div className="mb-2 text-xl text-brand">❄</div>
-              <strong className="mb-1 block text-[11px] font-semibold text-[#0F172A]">
-                Cold-Chain
-              </strong>
-              <small className="text-[9px] leading-4 text-[var(--text)]">
-                Monitored 2°C - 8°C
-              </small>
-            </div>
+                  <h3 className="text-sm font-bold text-[#0F172A]">
+                    {item.title}
+                  </h3>
 
-            <div className="animate-rise animate-lift rounded-xl border border-[#E2E8F0] bg-white p-3 shadow-[0_1px_3px_rgba(15,23,42,0.04)]" style={{ animationDelay: "460ms" }}>
-              <div className="mb-2 text-xl text-brand">✓</div>
-              <strong className="mb-1 block text-[11px] font-semibold text-[#0F172A]">
-                Free Delivery
-              </strong>
-              <small className="text-[9px] leading-4 text-[var(--text)]">
-                Within 5 km radius
-              </small>
-            </div>
-
+                  <p className="mt-1 text-xs leading-5 text-[var(--text)]">
+                    {item.copy}
+                  </p>
+                </div>
+              )
+            })}
           </div>
 
-          {/* Buttons */}
-          <div className="animate-rise mt-1 flex flex-col gap-3 sm:flex-row" style={{ animationDelay: "520ms" }}>
-
+          <div
+            className="animate-rise mt-7 flex flex-col gap-3 sm:flex-row"
+            style={{ animationDelay: "560ms" }}
+          >
             <button
+              type="button"
               onClick={() => navigate("/order")}
-              className="animate-lift flex-1 cursor-pointer rounded-lg border-0 bg-brand px-5 py-3.5 text-xs font-bold text-white shadow-[0_10px_22px_rgba(15,118,110,0.18)] hover:bg-brand-strong hover:shadow-[0_14px_26px_rgba(15,118,110,0.22)]"
+              className="animate-lift inline-flex flex-1 items-center justify-center gap-2 rounded-2xl bg-brand px-6 py-3.5 text-sm font-bold text-white shadow-brand transition hover:bg-brand-strong"
             >
-              📄
-              <span>Order with Doctor's Prescription</span>
-              <span> ↓</span>
+              Order with prescription
+              <ArrowRight size={17} />
             </button>
 
-            <button
-              onClick={() => window.open("tel:6392323282")}
-              className="animate-lift flex-[.72] cursor-pointer rounded-lg border border-[#dce8e5] bg-white px-5 py-3.5 text-xs font-bold text-brand"
+            <a
+              href="tel:6392323282"
+              className="animate-lift inline-flex flex-1 items-center justify-center gap-2 rounded-2xl border border-slate-200 bg-white px-6 py-3.5 text-sm font-bold text-brand-strong transition hover:border-brand/20 hover:bg-brand-soft"
             >
-              ☎
-              <span>Speak to Pharmacist</span>
-            </button>
-
+              <PhoneCall size={17} />
+              Call Pharmacist
+            </a>
           </div>
 
-          {/* Security Text */}
-          <div className="animate-rise mt-5 flex items-center gap-2 text-[10px] text-[#64748B]" style={{ animationDelay: "600ms" }}>
-            <span className="text-brand">🔒</span>
-            <span>
-              256-bit encrypted healthcare portal
+          <div
+            className="animate-rise mt-5 flex flex-wrap items-center gap-2 text-[11px] text-[#64748B]"
+            style={{ animationDelay: "640ms" }}
+          >
+            <span className="inline-flex items-center gap-2 rounded-full border border-brand/15 bg-white/80 px-3 py-2 font-semibold text-brand-strong shadow-sm">
+              <ShieldCheck size={14} />
+              Secure healthcare portal
             </span>
+            <span>•</span>
+            <span>Pharmacist-guided service with clear communication</span>
           </div>
-
         </div>
 
         {/* RIGHT IMAGE */}
-        <div className="relative">
+        <div className="relative z-10 lg:flex lg:flex-col lg:justify-center lg:py-6">
+          <div className="absolute inset-4 rounded-[2.35rem] border border-white/70 bg-white/70 shadow-[0_24px_60px_rgba(15,23,42,0.08)] lg:inset-8" />
 
-          {/* Verification Badge */}
-          <div className="animate-float absolute -left-3 -top-3 z-10 rounded-xl border border-[#E2E8F0] bg-white px-4 py-3 text-[9px] text-[#64748B] shadow-[0_10px_20px_rgba(15,23,42,0.08)]">
-            <span>✓ &nbsp; SAFETY PROTOCOL</span>
+          <div className="relative isolate animate-rise animate-lift overflow-hidden rounded-[2.35rem] border border-[#dbe7e4] bg-white shadow-[0_24px_60px_rgba(15,23,42,0.12)] lg:min-h-[680px] xl:min-h-[740px]">
+            <div className="absolute left-4 top-4 z-20 inline-flex items-center gap-2 rounded-full border border-white/70 bg-white/90 px-3 py-2 text-[11px] font-bold uppercase tracking-[0.14em] text-brand-strong shadow-sm backdrop-blur">
+              <ShieldCheck size={14} className="text-brand" />
+              Pharmacist verified
+            </div>
 
-            <b className="mt-1 block text-[11px] text-brand">
-              Pharmacist Verified
-            </b>
-          </div>
+            <div className="absolute inset-0 z-[1] bg-[linear-gradient(180deg,rgba(255,255,255,0.06)_0%,rgba(255,255,255,0)_38%,rgba(15,23,42,0.06)_100%)]" />
 
-          {/* Hero Image */}
-          <div className="animate-rise animate-lift overflow-hidden rounded-2xl border border-[#E2E8F0] bg-white shadow-[0_10px_30px_rgba(15,23,42,0.08)]" style={{ animationDelay: "220ms" }}>
             <img
-              className="animate-float-slow block w-full object-cover transition-transform duration-700 hover:scale-[1.03]"
+              className="absolute inset-0 z-0 h-full w-full object-cover transition duration-700 hover:scale-[1.03]"
               src="/hero.png"
               alt="Pharmacist preparing a medicine order"
             />
+
+            <div className="absolute bottom-5 left-5 right-5 z-20 hidden gap-3 lg:grid lg:grid-cols-3">
+              <div className="rounded-2xl border border-white/70 bg-white/90 px-4 py-3 shadow-sm backdrop-blur">
+                <p className="text-[10px] font-bold uppercase tracking-[0.14em] text-brand-strong">
+                  Delivery
+                </p>
+                <p className="mt-1 text-sm font-semibold text-[#0F172A]">
+                  Free within 5 km
+                </p>
+              </div>
+
+              <div className="rounded-2xl border border-white/70 bg-white/90 px-4 py-3 shadow-sm backdrop-blur">
+                <p className="text-[10px] font-bold uppercase tracking-[0.14em] text-sky">
+                  Review
+                </p>
+                <p className="mt-1 text-sm font-semibold text-[#0F172A]">
+                  Pharmacist checked
+                </p>
+              </div>
+
+              <div className="rounded-2xl border border-white/70 bg-white/90 px-4 py-3 shadow-sm backdrop-blur">
+                <p className="text-[10px] font-bold uppercase tracking-[0.14em] text-amber">
+                  Packaging
+                </p>
+                <p className="mt-1 text-sm font-semibold text-[#0F172A]">
+                  Secure and careful
+                </p>
+              </div>
+            </div>
           </div>
-
         </div>
-
       </div>
     </section>
-  );
-};
+  )
+}
 
-export default Herosection;
+export default Herosection
