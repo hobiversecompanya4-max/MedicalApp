@@ -37,14 +37,14 @@ const AdminLogin = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-[#edf8f5] via-white to-[#e6f4f0] flex items-center justify-center px-4 py-10">
+    <div className="min-h-screen bg-gradient-to-br from-[#f3fbf8] via-white to-[#e8f6f1] flex items-center justify-center px-4 py-10">
 
       <div className="w-full max-w-md">
 
         {/* Admin Brand */}
         <div className="mb-8 text-center">
 
-          <div className="mx-auto mb-4 flex h-16 w-16 items-center justify-center rounded-2xl bg-[#126b5b] shadow-lg shadow-[#126b5b]/20">
+          <div className="mx-auto mb-4 flex h-16 w-16 items-center justify-center rounded-2xl bg-brand shadow-lg shadow-brand/20">
 
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -70,11 +70,11 @@ const AdminLogin = () => {
           </div>
 
           <h1 className="text-3xl font-bold text-gray-900">
-            Quick <span className="text-[#126b5b]">Meds</span>
+            Panchawati <span className="text-brand">Meds</span>
           </h1>
 
-          <div className="mt-2 inline-flex items-center rounded-full bg-[#126b5b]/10 px-3 py-1">
-            <span className="text-xs font-semibold text-[#126b5b]">
+          <div className="mt-2 inline-flex items-center rounded-full bg-brand-soft px-3 py-1">
+            <span className="text-xs font-semibold text-brand">
               ADMIN PORTAL
             </span>
           </div>
@@ -167,7 +167,7 @@ const AdminLogin = () => {
                   required
                   autoComplete="email"
                   placeholder="admin@example.com"
-                  className="w-full rounded-xl border border-gray-200 bg-gray-50 py-3.5 pl-12 pr-4 text-sm text-gray-900 outline-none transition focus:border-[#126b5b] focus:bg-white focus:ring-4 focus:ring-[#126b5b]/10"
+                  className="w-full rounded-xl border border-gray-200 bg-gray-50 py-3.5 pl-12 pr-4 text-sm text-gray-900 outline-none transition focus:border-brand focus:bg-white focus:ring-4 focus:ring-brand/10"
                 />
 
               </div>
@@ -214,7 +214,7 @@ const AdminLogin = () => {
                   required
                   autoComplete="current-password"
                   placeholder="Enter admin password"
-                  className="w-full rounded-xl border border-gray-200 bg-gray-50 py-3.5 pl-12 pr-4 text-sm text-gray-900 outline-none transition focus:border-[#126b5b] focus:bg-white focus:ring-4 focus:ring-[#126b5b]/10"
+                  className="w-full rounded-xl border border-gray-200 bg-gray-50 py-3.5 pl-12 pr-4 text-sm text-gray-900 outline-none transition focus:border-brand focus:bg-white focus:ring-4 focus:ring-brand/10"
                 />
 
               </div>
@@ -224,7 +224,7 @@ const AdminLogin = () => {
             <button
               type="submit"
               disabled={loading}
-              className="flex w-full items-center justify-center gap-2 rounded-xl bg-[#126b5b] py-3.5 text-sm font-semibold text-white shadow-lg shadow-[#126b5b]/20 transition hover:bg-[#0e5447] hover:shadow-xl disabled:cursor-not-allowed disabled:opacity-60"
+              className="flex w-full items-center justify-center gap-2 rounded-xl bg-brand py-3.5 text-sm font-semibold text-white shadow-lg shadow-brand/20 transition hover:bg-brand-strong hover:shadow-xl disabled:cursor-not-allowed disabled:opacity-60"
             >
 
               {loading ? (
@@ -270,7 +270,7 @@ const AdminLogin = () => {
             <button
               type="button"
               onClick={() => navigate("/login")}
-              className="text-sm font-medium text-gray-500 transition hover:text-[#126b5b]"
+              className="text-sm font-medium text-gray-500 transition hover:text-brand"
             >
               ← Back to customer login
             </button>

@@ -6,47 +6,47 @@ const StoreLocation = () => {
   return (
     <section
       id="location"
-      className="bg-[#F8FAFC] px-5 py-14 sm:px-6 sm:py-16"
+      className="bg-[#F8FAFC] px-5 py-14 sm:px-6 sm:py-16 animate-rise"
     >
       <div className="mx-auto max-w-[1200px]">
         <div className="grid items-center gap-8 md:grid-cols-2 md:gap-12">
 
           {/* Store Information */}
-          <div>
-            <p className="mb-2 text-[10px] font-bold uppercase tracking-[0.12em] text-[#007A78]">
+          <div className="animate-rise">
+            <p className="mb-2 text-[10px] font-bold uppercase tracking-[0.12em] text-brand">
               📍 VISIT OUR STORE
             </p>
 
             <h2 className="font-[Plus_Jakarta_Sans] text-[28px] font-semibold leading-tight tracking-[-0.5px] text-[#0F172A] sm:text-[34px]">
-              Find QuickMeds Near You
+              Find Panchawati Meds Near You
             </h2>
 
-            <p className="mt-4 max-w-[520px] text-sm leading-6 text-[#475569]">
+            <p className="mt-4 max-w-[520px] text-sm leading-6 text-[var(--text)]">
               Prefer to visit us in person? Our medical store is available
               for customers who want to purchase medicines, ask questions,
               or speak directly with our pharmacy team.
             </p>
 
             <div className="mt-6 space-y-3">
-              <div className="flex items-start gap-3 rounded-xl border border-[#E2E8F0] bg-white p-4">
-                <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-[#F0FDF4] text-lg text-[#007A78]">
+              <div className="animate-lift flex items-start gap-3 rounded-xl border border-[#E2E8F0] bg-white p-4">
+                <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-brand-soft text-lg text-brand">
                   📍
                 </div>
 
                 <div>
                   <h3 className="text-sm font-semibold text-[#0F172A]">
-                    QuickMeds Medical Store
+                    Panchawati Meds Medical Store
                   </h3>
 
-                  <p className="mt-1 text-xs leading-5 text-[#64748B]">
+                  <p className="mt-1 text-xs leading-5 text-[var(--text)]">
                     Visit our store using the location provided on Google
                     Maps.
                   </p>
                 </div>
               </div>
 
-              <div className="flex items-start gap-3 rounded-xl border border-[#E2E8F0] bg-white p-4">
-                <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-[#EFF6FF] text-lg text-[#0284C7]">
+              <div className="animate-lift flex items-start gap-3 rounded-xl border border-[#E2E8F0] bg-white p-4">
+                <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-brand-soft-2 text-lg text-brand">
                   🕐
                 </div>
 
@@ -55,7 +55,7 @@ const StoreLocation = () => {
                     In-Person Assistance
                   </h3>
 
-                  <p className="mt-1 text-xs leading-5 text-[#64748B]">
+                  <p className="mt-1 text-xs leading-5 text-[var(--text)]">
                     Our team can help you with medicine availability,
                     prescriptions, and general pharmacy guidance.
                   </p>
@@ -67,7 +67,7 @@ const StoreLocation = () => {
               href={STORE_MAP_URL}
               target="_blank"
               rel="noopener noreferrer"
-              className="qm-btn-primary mt-6 inline-flex"
+              className="qm-btn-primary animate-lift mt-6 inline-flex"
             >
               📍 Get Directions
               <span>↗</span>
@@ -75,7 +75,7 @@ const StoreLocation = () => {
           </div>
 
           {/* Map Card */}
-          <div className="overflow-hidden rounded-2xl border border-[#E2E8F0] bg-white p-2 shadow-[0_10px_30px_rgba(15,23,42,0.06)]">
+          <div className="animate-rise-delay animate-lift overflow-hidden rounded-2xl border border-[#E2E8F0] bg-white p-2 shadow-[0_10px_30px_rgba(15,23,42,0.06)]">
             <div className="relative flex min-h-[320px] items-center justify-center overflow-hidden rounded-xl bg-[#E8F0EC]">
 
               {/* Decorative map background */}
@@ -90,13 +90,13 @@ const StoreLocation = () => {
 
               {/* Location pin */}
               <div className="relative z-10 flex flex-col items-center">
-                <div className="flex h-14 w-14 items-center justify-center rounded-full border-4 border-white bg-[#007A78] text-2xl text-white shadow-lg">
+                <div className="animate-float flex h-14 w-14 items-center justify-center rounded-full border-4 border-white bg-brand text-2xl text-white shadow-lg">
                   📍
                 </div>
 
-                <div className="mt-3 rounded-lg border border-[#E2E8F0] bg-white px-4 py-2 text-center shadow-md">
+                <div className="animate-lift mt-3 rounded-lg border border-[#E2E8F0] bg-white px-4 py-2 text-center shadow-md">
                   <p className="text-xs font-bold text-[#0F172A]">
-                    QuickMeds Medical Store
+                    Panchawati Meds Medical Store
                   </p>
                   <p className="mt-0.5 text-[10px] text-[#64748B]">
                     Open location in Google Maps
@@ -108,7 +108,7 @@ const StoreLocation = () => {
                 href={STORE_MAP_URL}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="absolute bottom-4 right-4 z-10 rounded-lg bg-white px-3 py-2 text-xs font-semibold text-[#007A78] shadow-md transition hover:bg-[#F0FDF4]"
+                className="animate-lift absolute bottom-4 right-4 z-10 rounded-lg bg-white px-3 py-2 text-xs font-semibold text-brand shadow-md transition hover:bg-brand-soft"
               >
                 Open Map ↗
               </a>

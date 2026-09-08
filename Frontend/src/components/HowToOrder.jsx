@@ -31,21 +31,21 @@ const HowToOrder = () => {
   return (
     <section
       id="how-it-works"
-      className="bg-[#F1F2FF] px-5 py-14 sm:px-8 sm:py-16"
+      className="bg-surface px-5 py-14 sm:px-8 sm:py-16 animate-rise"
     >
       <div className="mx-auto max-w-[1200px]">
 
         {/* Section Heading */}
         <div className="mb-8 text-center">
-          <p className="mb-2 text-[10px] font-bold uppercase tracking-[0.12em] text-[#007A78]">
+          <p className="animate-rise mb-2 text-[10px] font-bold uppercase tracking-[0.12em] text-brand">
             ⚙ STREAMLINED DISPENSING WORKFLOW
           </p>
 
-          <h2 className="font-[Plus_Jakarta_Sans] text-[28px] font-semibold leading-tight tracking-[-0.8px] text-[#0F172A] sm:text-[34px]">
+          <h2 className="animate-rise font-[Plus_Jakarta_Sans] text-[28px] font-semibold leading-tight tracking-[-0.8px] text-[#0F172A] sm:text-[34px]" style={{ animationDelay: "90ms" }}>
             How Ordering via Prescription Works
           </h2>
 
-          <p className="mx-auto mt-2 max-w-[700px] text-xs leading-5 text-[#475569] sm:text-[13px]">
+          <p className="animate-rise mx-auto mt-2 max-w-[700px] text-xs leading-5 text-[var(--text)] sm:text-[13px]" style={{ animationDelay: "150ms" }}>
             Simple, legally compliant, and contact-free. Receive your genuine
             prescription medications in three straightforward milestones.
           </p>
@@ -54,15 +54,16 @@ const HowToOrder = () => {
         {/* Steps */}
         <div className="grid grid-cols-1 gap-4 md:grid-cols-3">
 
-          {steps.map((step) => (
+          {steps.map((step, index) => (
             <div
               key={step.number}
-              className="rounded-xl border border-[#E2E8F0] bg-white p-5 shadow-[0_1px_3px_rgba(15,23,42,0.04)] transition duration-200 hover:-translate-y-1 hover:border-[#0D9488] hover:shadow-[0_10px_20px_-5px_rgba(0,122,120,0.08)]"
+              className="animate-rise animate-lift rounded-xl border border-[#E2E8F0] bg-white p-5 shadow-[0_1px_3px_rgba(15,23,42,0.04)] hover:border-[#0D9488] hover:shadow-[0_10px_20px_-5px_rgba(0,122,120,0.08)]"
+              style={{ animationDelay: `${index * 120 + 180}ms` }}
             >
 
               {/* Number + Icon */}
               <div className="mb-3 flex items-center justify-between">
-                <div className="flex h-10 w-10 items-center justify-center rounded-[10px] bg-[#E6F2F2] text-[11px] font-bold text-[#007A78]">
+                <div className="flex h-10 w-10 items-center justify-center rounded-[10px] bg-brand-soft-2 text-[11px] font-bold text-brand">
                   {step.number}
                 </div>
 
@@ -77,12 +78,12 @@ const HowToOrder = () => {
               </h3>
 
               {/* Description */}
-              <p className="mt-2 text-xs leading-5 text-[#475569] sm:text-[13px]">
+              <p className="mt-2 text-xs leading-5 text-[var(--text)] sm:text-[13px]">
                 {step.description}
               </p>
 
               {/* Note */}
-              <div className="mt-4 flex items-center gap-1.5 text-[10px] font-bold text-[#007A78]">
+              <div className="mt-4 flex items-center gap-1.5 text-[10px] font-bold text-brand">
                 <span>▣</span>
                 <span>{step.note}</span>
               </div>

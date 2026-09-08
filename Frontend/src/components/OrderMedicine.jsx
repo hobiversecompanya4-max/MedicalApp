@@ -129,12 +129,12 @@ const OrderMedicine = () => {
   };
 
   return (
-    <section id="order" className="bg-[#F8FAFC] py-16 md:py-20">
+    <section id="order" className="bg-[#F8FAFC] py-16 md:py-20 animate-rise">
       <div className="max-w-[1000px] mx-auto px-4 sm:px-6">
 
         {/* Section Heading */}
         <div className="text-center mb-10">
-          <span className="inline-flex items-center rounded-full bg-[#F0FDF4] px-4 py-2 text-xs font-semibold text-[#007A78]">
+          <span className="inline-flex items-center rounded-full bg-brand-soft px-4 py-2 text-xs font-semibold text-brand">
             ORDER MEDICINE
           </span>
 
@@ -149,7 +149,7 @@ const OrderMedicine = () => {
         </div>
 
         {/* Form Card */}
-        <div className="bg-white border border-[#E2E8F0] rounded-2xl shadow-sm p-6 md:p-8">
+        <div className="animate-rise animate-lift bg-white border border-[#E2E8F0] rounded-2xl shadow-sm p-6 md:p-8">
 
           <form onSubmit={handleSubmit} className="space-y-7">
 
@@ -162,7 +162,7 @@ const OrderMedicine = () => {
 
               <label
                 htmlFor="prescription"
-                className="flex flex-col items-center justify-center w-full min-h-[170px] border-2 border-dashed border-[#CBD5E1] rounded-xl bg-[#F8FAFC] hover:bg-[#F0FDF4] hover:border-[#007A78] transition cursor-pointer"
+                className="flex flex-col items-center justify-center w-full min-h-[170px] border-2 border-dashed border-[#CBD5E1] rounded-xl bg-surface hover:bg-brand-soft hover:border-brand transition cursor-pointer"
               >
                 <div className="text-3xl mb-3">
                   📄
@@ -170,7 +170,7 @@ const OrderMedicine = () => {
 
                 {prescription ? (
                   <>
-                    <p className="text-sm font-semibold text-[#007A78]">
+                    <p className="text-sm font-semibold text-brand">
                       {prescription.name}
                     </p>
 
@@ -188,7 +188,7 @@ const OrderMedicine = () => {
                       JPG, PNG or PDF
                     </p>
 
-                    <span className="mt-4 px-4 py-2 rounded-lg border border-[#007A78] text-[#007A78] text-sm font-semibold">
+                    <span className="mt-4 px-4 py-2 rounded-lg border border-brand text-brand text-sm font-semibold">
                       Choose File
                     </span>
                   </>
@@ -226,7 +226,7 @@ const OrderMedicine = () => {
                 required
                 value={formData.name}
                 onChange={handleChange}
-                className="w-full h-12 px-4 rounded-lg border border-[#CBD5E1] bg-white text-sm text-[#0F172A] placeholder:text-[#94A3B8] outline-none focus:border-[#007A78] focus:ring-2 focus:ring-[#007A78]/10"
+                className="w-full h-12 px-4 rounded-lg border border-[#CBD5E1] bg-white text-sm text-[#0F172A] placeholder:text-[#94A3B8] outline-none focus:border-brand focus:ring-2 focus:ring-brand/10"
               />
             </div>
 
@@ -254,7 +254,7 @@ const OrderMedicine = () => {
                   required
                   value={formData.phone}
                   onChange={handleChange}
-                  className="w-full h-12 px-4 rounded-lg border border-[#CBD5E1] bg-white text-sm text-[#0F172A] placeholder:text-[#94A3B8] outline-none focus:border-[#007A78] focus:ring-2 focus:ring-[#007A78]/10"
+                  className="w-full h-12 px-4 rounded-lg border border-[#CBD5E1] bg-white text-sm text-[#0F172A] placeholder:text-[#94A3B8] outline-none focus:border-brand focus:ring-2 focus:ring-brand/10"
                 />
               </div>
 
@@ -279,7 +279,7 @@ const OrderMedicine = () => {
                   required
                   value={formData.confirmMobile}
                   onChange={handleChange}
-                  className="w-full h-12 px-4 rounded-lg border border-[#CBD5E1] bg-white text-sm text-[#0F172A] placeholder:text-[#94A3B8] outline-none focus:border-[#007A78] focus:ring-2 focus:ring-[#007A78]/10"
+                  className="w-full h-12 px-4 rounded-lg border border-[#CBD5E1] bg-white text-sm text-[#0F172A] placeholder:text-[#94A3B8] outline-none focus:border-brand focus:ring-2 focus:ring-brand/10"
                 />
               </div>
 
@@ -306,7 +306,7 @@ const OrderMedicine = () => {
                 pattern="[0-9]{10}"
                 value={formData.alternatePhone}
                 onChange={handleChange}
-                className="w-full h-12 px-4 rounded-lg border border-[#CBD5E1] bg-white text-sm text-[#0F172A] placeholder:text-[#94A3B8] outline-none focus:border-[#007A78] focus:ring-2 focus:ring-[#007A78]/10"
+                className="w-full h-12 px-4 rounded-lg border border-[#CBD5E1] bg-white text-sm text-[#0F172A] placeholder:text-[#94A3B8] outline-none focus:border-brand focus:ring-2 focus:ring-brand/10"
               />
             </div>
 
@@ -329,7 +329,7 @@ const OrderMedicine = () => {
                 required
                 value={formData.address}
                 onChange={handleChange}
-                className="w-full px-4 py-3 rounded-lg border border-[#CBD5E1] bg-white text-sm text-[#0F172A] placeholder:text-[#94A3B8] outline-none resize-none focus:border-[#007A78] focus:ring-2 focus:ring-[#007A78]/10"
+                className="w-full px-4 py-3 rounded-lg border border-[#CBD5E1] bg-white text-sm text-[#0F172A] placeholder:text-[#94A3B8] outline-none resize-none focus:border-brand focus:ring-2 focus:ring-brand/10"
               />
             </div>
 
@@ -360,13 +360,13 @@ const OrderMedicine = () => {
                   placeholder="Enter medicine name"
                   value={formData.medicine}
                   onChange={handleChange}
-                  className="flex-1 h-12 px-4 rounded-lg border border-[#CBD5E1] bg-white text-sm text-[#0F172A] placeholder:text-[#94A3B8] outline-none focus:border-[#007A78] focus:ring-2 focus:ring-[#007A78]/10"
+                  className="flex-1 h-12 px-4 rounded-lg border border-[#CBD5E1] bg-white text-sm text-[#0F172A] placeholder:text-[#94A3B8] outline-none focus:border-brand focus:ring-2 focus:ring-brand/10"
                 />
 
                 <button
                   type="button"
                   onClick={addMedicine}
-                  className="h-12 px-6 rounded-lg border border-[#007A78] text-[#007A78] font-semibold text-sm hover:bg-[#F0FDF4] transition"
+                  className="h-12 px-6 rounded-lg border border-brand text-brand font-semibold text-sm hover:bg-brand-soft transition"
                 >
                   + Add Medicine
                 </button>
@@ -402,7 +402,7 @@ const OrderMedicine = () => {
             </div>
 
             {/* Verification Note */}
-            <div className="flex gap-3 rounded-xl bg-[#F0FDF4] border border-[#BBF7D0] p-4">
+            <div className="flex gap-3 rounded-xl bg-brand-soft border border-[#cfe9e1] p-4">
 
               <div className="text-lg">
                 ✓
@@ -425,7 +425,7 @@ const OrderMedicine = () => {
             <button
               type="submit"
               disabled={loading}
-              className="w-full h-12 rounded-lg bg-[#007A78] text-white font-semibold text-sm hover:bg-[#006563] transition shadow-sm disabled:opacity-60 disabled:cursor-not-allowed"
+              className="w-full h-12 rounded-lg bg-brand text-white font-semibold text-sm hover:bg-brand-strong transition shadow-sm disabled:opacity-60 disabled:cursor-not-allowed"
             >
               {loading
                 ? "Submitting Order..."

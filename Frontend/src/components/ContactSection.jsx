@@ -27,21 +27,21 @@ const ContactSection = () => {
   return (
     <section
       id="contact"
-      className="bg-white px-4 py-20 sm:px-6 lg:px-8"
+      className="bg-white px-4 py-20 sm:px-6 lg:px-8 animate-rise"
     >
       <div className="mx-auto max-w-7xl">
 
         {/* ================= HEADER ================= */}
         <div className="mx-auto mb-14 max-w-2xl text-center">
-          <span className="mb-3 inline-block rounded-full bg-blue-50 px-4 py-2 text-sm font-semibold text-blue-600">
+          <span className="animate-rise mb-3 inline-block rounded-full bg-brand-soft px-4 py-2 text-sm font-semibold text-brand">
             Contact Us
           </span>
 
-          <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
+          <h2 className="animate-rise text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl" style={{ animationDelay: "90ms" }}>
             We're Here to Help You
           </h2>
 
-          <p className="mt-4 leading-7 text-gray-600">
+          <p className="animate-rise mt-4 leading-7 text-[var(--text)]" style={{ animationDelay: "150ms" }}>
             Have a question about medicines, prescriptions, or your order?
             Get in touch with us and our team will be happy to help.
           </p>
@@ -51,7 +51,7 @@ const ContactSection = () => {
         <div className="grid gap-8 lg:grid-cols-2">
 
           {/* ================= CONTACT INFORMATION ================= */}
-          <div className="rounded-3xl bg-gray-50 p-6 sm:p-8">
+          <div className="animate-rise animate-lift rounded-3xl bg-surface p-6 sm:p-8">
 
             <h3 className="text-2xl font-bold text-gray-900">
               Get in Touch
@@ -66,9 +66,9 @@ const ContactSection = () => {
               {/* PHONE */}
               <a
                 href={`tel:${storePhone}`}
-                className="group flex items-start gap-4"
+                className="group flex items-start gap-4 transition-transform duration-200 hover:-translate-y-0.5"
               >
-                <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-blue-100 text-blue-600 transition-all duration-200 group-hover:bg-blue-600 group-hover:text-white">
+                <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-brand-soft text-brand transition-all duration-200 group-hover:bg-brand group-hover:text-white">
                   <Phone size={21} />
                 </div>
 
@@ -92,9 +92,9 @@ const ContactSection = () => {
                 href={`https://wa.me/${storePhone.replace("+", "")}`}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="group flex items-start gap-4"
+                className="group flex items-start gap-4 transition-transform duration-200 hover:-translate-y-0.5"
               >
-                <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-green-100 text-green-600 transition-all duration-200 group-hover:bg-green-600 group-hover:text-white">
+                <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-brand-soft-2 text-brand transition-all duration-200 group-hover:bg-brand group-hover:text-white">
                   <FaWhatsapp size={21} />
                 </div>
 
@@ -116,9 +116,9 @@ const ContactSection = () => {
               {/* EMAIL */}
               <a
                 href={`mailto:${storeEmail}`}
-                className="group flex items-start gap-4"
+                className="group flex items-start gap-4 transition-transform duration-200 hover:-translate-y-0.5"
               >
-                <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-purple-100 text-purple-600 transition-all duration-200 group-hover:bg-purple-600 group-hover:text-white">
+                <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-brand-soft text-brand transition-all duration-200 group-hover:bg-brand group-hover:text-white">
                   <Mail size={21} />
                 </div>
 
@@ -142,9 +142,9 @@ const ContactSection = () => {
                 href={mapUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="group flex items-start gap-4"
+                className="group flex items-start gap-4 transition-transform duration-200 hover:-translate-y-0.5"
               >
-                <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-red-100 text-red-600 transition-all duration-200 group-hover:bg-red-600 group-hover:text-white">
+                <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-brand-soft text-brand transition-all duration-200 group-hover:bg-brand group-hover:text-white">
                   <MapPin size={21} />
                 </div>
 
@@ -159,7 +159,7 @@ const ContactSection = () => {
                     Lucknow, Uttar Pradesh, India
                   </p>
 
-                  <span className="mt-2 inline-flex items-center gap-1 text-sm font-semibold text-blue-600">
+                  <span className="mt-2 inline-flex items-center gap-1 text-sm font-semibold text-brand">
                     Get Directions
                     <ExternalLink size={14} />
                   </span>
@@ -167,7 +167,7 @@ const ContactSection = () => {
               </a>
 
               {/* OPENING HOURS */}
-              <div className="flex items-start gap-4">
+              <div className="animate-lift flex items-start gap-4">
                 <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-orange-100 text-orange-600">
                   <Clock size={21} />
                 </div>
@@ -186,8 +186,8 @@ const ContactSection = () => {
                   </p>
 
                   <div className="mt-2 flex items-center gap-2">
-                    <span className="h-2 w-2 rounded-full bg-green-500" />
-                    <span className="text-sm font-medium text-green-600">
+                    <span className="h-2 w-2 rounded-full bg-brand" />
+                    <span className="text-sm font-medium text-brand">
                       Open Daily
                     </span>
                   </div>
@@ -201,7 +201,7 @@ const ContactSection = () => {
           <div className="flex flex-col gap-6">
 
             {/* ASSISTANCE CARD */}
-            <div className="rounded-3xl bg-blue-600 p-8 text-white">
+            <div className="animate-rise animate-lift rounded-3xl bg-brand p-8 text-white">
 
               <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-white/15">
                 <Send size={24} />
@@ -211,7 +211,7 @@ const ContactSection = () => {
                 Need Assistance?
               </h3>
 
-              <p className="mt-3 leading-7 text-blue-100">
+              <p className="mt-3 leading-7 text-brand-soft-2">
                 Our team is ready to help you with medicine availability,
                 prescription orders, delivery information, and general
                 queries.
@@ -222,7 +222,7 @@ const ContactSection = () => {
                 {/* CALL BUTTON */}
                 <a
                   href={`tel:${storePhone}`}
-                  className="inline-flex items-center gap-2 rounded-xl bg-white px-5 py-3 font-semibold text-blue-600 transition-all duration-200 hover:bg-blue-50"
+                  className="inline-flex items-center gap-2 rounded-xl bg-white px-5 py-3 font-semibold text-brand transition-all duration-200 hover:bg-brand-soft"
                 >
                   <Phone size={18} />
                   Call Now
@@ -243,7 +243,7 @@ const ContactSection = () => {
             </div>
 
             {/* ================= SOCIAL MEDIA ================= */}
-            <div className="rounded-3xl border border-gray-100 bg-white p-8 shadow-sm">
+            <div className="animate-rise animate-lift rounded-3xl border border-gray-100 bg-white p-8 shadow-sm" style={{ animationDelay: "120ms" }}>
 
               <h3 className="text-xl font-bold text-gray-900">
                 Follow Us
@@ -283,9 +283,9 @@ const ContactSection = () => {
                   href="https://facebook.com/yourmedicalstore"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="group flex items-center gap-3 rounded-xl border border-gray-100 p-4 transition-all duration-200 hover:border-blue-200 hover:bg-blue-50"
+                  className="group flex items-center gap-3 rounded-xl border border-gray-100 p-4 transition-all duration-200 hover:border-brand/30 hover:bg-brand-soft"
                 >
-                  <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-blue-50 text-blue-600 group-hover:bg-white">
+                  <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-brand-soft text-brand group-hover:bg-white">
                     <FaFacebookF size={18} />
                   </div>
 

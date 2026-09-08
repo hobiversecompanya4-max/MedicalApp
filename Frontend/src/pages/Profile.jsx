@@ -97,11 +97,11 @@ const Profile = () => {
     <>
       <Navbar />
 
-      <main className="min-h-[70vh] bg-[#F8FAFC] px-4 py-16">
+      <main className="min-h-[70vh] bg-surface px-4 py-16">
 
         {/* PROFILE */}
-        <div className="mx-auto max-w-2xl rounded-2xl bg-white p-8 shadow-md">
-          <h1 className="mb-6 text-3xl font-bold text-[#126b5b]">
+        <div className="animate-rise mx-auto max-w-2xl rounded-2xl bg-white p-8 shadow-md">
+          <h1 className="mb-6 text-3xl font-bold text-brand">
             My Profile
           </h1>
 
@@ -149,8 +149,8 @@ const Profile = () => {
         </div>
 
         {/* MY ORDERS */}
-        <div className="mx-auto mt-6 max-w-2xl rounded-2xl bg-white p-8 shadow-md">
-          <h2 className="mb-6 text-2xl font-bold text-[#126b5b]">
+        <div className="animate-rise mx-auto mt-6 max-w-2xl rounded-2xl bg-white p-8 shadow-md" style={{ animationDelay: "120ms" }}>
+          <h2 className="mb-6 text-2xl font-bold text-brand">
             My Orders
           </h2>
 
@@ -165,7 +165,7 @@ const Profile = () => {
                 <div
                   key={order._id}
                   onClick={() => handleTrackOrder(order.orderId)}
-                  className="cursor-pointer rounded-xl border border-gray-200 p-5 transition hover:shadow-md"
+                  className="animate-lift cursor-pointer rounded-xl border border-gray-200 p-5 transition hover:shadow-md"
                 >
                   <div className="flex items-center justify-between">
 
@@ -181,7 +181,7 @@ const Profile = () => {
                       </p>
                     </div>
 
-                    <span className="rounded-lg bg-blue-50 px-3 py-1.5 text-sm font-semibold text-blue-600">
+                    <span className="rounded-lg bg-brand-soft px-3 py-1.5 text-sm font-semibold text-brand">
                       {order.orderStatus}
                     </span>
 
@@ -202,7 +202,7 @@ const Profile = () => {
 
                   </div>
 
-                  <p className="mt-3 text-sm font-medium text-[#126b5b]">
+                  <p className="mt-3 text-sm font-medium text-brand">
                     Click to track order →
                   </p>
 
@@ -215,7 +215,7 @@ const Profile = () => {
 
         {/* TRACKING LOADING */}
         {trackingLoading && (
-          <div className="mx-auto mt-6 max-w-2xl rounded-2xl bg-white p-6 text-center shadow-md">
+          <div className="animate-rise mx-auto mt-6 max-w-2xl rounded-2xl bg-white p-6 text-center shadow-md">
             <p className="text-gray-500">
               Loading order tracking...
             </p>
@@ -224,21 +224,21 @@ const Profile = () => {
 
         {/* TRACKING ERROR */}
         {trackingError && (
-          <div className="mx-auto mt-6 max-w-2xl rounded-2xl bg-red-50 p-6 text-red-600 shadow-md">
+          <div className="animate-rise mx-auto mt-6 max-w-2xl rounded-2xl bg-red-50 p-6 text-red-600 shadow-md">
             {trackingError}
           </div>
         )}
 
         {/* ORDER TRACKING */}
         {selectedOrder && !trackingLoading && (
-  <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/50 px-4">
-    <div className="relative max-h-[90vh] w-full max-w-lg overflow-y-auto rounded-2xl bg-white p-6 shadow-2xl">
+    <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/50 px-4">
+    <div className="animate-rise relative max-h-[90vh] w-full max-w-lg overflow-y-auto rounded-2xl bg-white p-6 shadow-2xl">
 
       {/* Close Button */}
       <button
         type="button"
         onClick={() => setSelectedOrder(null)}
-        className="absolute right-4 top-4 flex h-10 w-10 items-center justify-center rounded-full bg-gray-100 text-xl text-gray-600 transition hover:bg-gray-200 hover:text-gray-900"
+        className="absolute right-4 top-4 flex h-10 w-10 items-center justify-center rounded-full bg-gray-100 text-xl text-gray-600 transition hover:bg-brand-soft hover:text-brand"
         aria-label="Close order tracking"
       >
         ×
@@ -246,7 +246,7 @@ const Profile = () => {
 
       {/* Header */}
       <div className="pr-12">
-        <h2 className="text-2xl font-bold text-[#126b5b]">
+        <h2 className="text-2xl font-bold text-brand">
           Order Tracking
         </h2>
 
@@ -265,7 +265,7 @@ const Profile = () => {
           Current Status
         </p>
 
-        <p className="mt-1 text-lg font-bold text-[#126b5b]">
+        <p className="mt-1 text-lg font-bold text-brand">
           {selectedOrder.orderStatus}
         </p>
       </div>
@@ -306,7 +306,7 @@ const Profile = () => {
                 <div
                   className={`flex h-10 w-10 shrink-0 items-center justify-center rounded-full border-2 text-sm font-bold ${
                     isCompleted
-                      ? "border-[#126b5b] bg-[#126b5b] text-white"
+                      ? "border-brand bg-brand text-white"
                       : "border-gray-300 bg-white text-gray-400"
                   }`}
                 >
@@ -317,7 +317,7 @@ const Profile = () => {
                   <p
                     className={`font-medium ${
                       isCurrent
-                        ? "text-[#126b5b]"
+                        ? "text-brand"
                         : isCompleted
                         ? "text-gray-800"
                         : "text-gray-400"

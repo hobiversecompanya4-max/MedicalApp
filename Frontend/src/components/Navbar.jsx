@@ -11,7 +11,6 @@ const Navbar = () => {
     { label: 'Home', href: '/' },
     { label: 'Order', href: '/order' },
     { label: 'Contact', href: '/contact' },
-    { label: 'Admin', href: '/admin' },
   ]
 
   const loggedIn = isLoggedIn()
@@ -31,21 +30,21 @@ const Navbar = () => {
   }
 
   return (
-    <header className="sticky top-0 z-50 bg-white shadow-[0_2px_10px_rgba(0,0,0,0.08)]">
+    <header className="sticky top-0 z-50 border-b border-white/70 bg-white/90 shadow-[0_2px_18px_rgba(15,23,42,0.06)] backdrop-blur-md animate-rise">
       <nav className="mx-auto flex max-w-7xl items-center justify-between px-4 py-3 sm:px-6 lg:px-8">
 
         {/* Brand Logo */}
-        <a
-          href="/"
-          className="flex items-center gap-2.5 text-xl font-bold text-[#126b5b]"
-        >
-          <img
-            src="/logo.png"
-            alt="Quick Meds logo"
-            className="h-10 w-10 object-contain"
-          />
-          <span>Quick Meds</span>
-        </a>
+          <a
+            href="/"
+            className="flex items-center gap-2.5 text-xl font-bold text-brand transition-transform duration-300 hover:translate-y-[-1px]"
+          >
+            <img
+              src="/logo.png"
+              alt="Panchawati Meds logo"
+              className="h-10 w-10 object-contain transition-transform duration-300 hover:scale-105"
+            />
+            <span>Panchawati Meds</span>
+          </a>
 
         {/* Hamburger */}
         <button
@@ -53,7 +52,7 @@ const Navbar = () => {
           aria-label="Toggle navigation menu"
           aria-expanded={isMenuOpen}
           onClick={() => setIsMenuOpen((prev) => !prev)}
-          className="rounded p-1 text-2xl text-[#126b5b] transition hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-[#126b5b] sm:hidden"
+          className="rounded p-1 text-2xl text-brand transition hover:bg-brand-soft focus:outline-none focus:ring-2 focus:ring-brand sm:hidden"
         >
           {isMenuOpen ? '✕' : '☰'}
         </button>
@@ -61,7 +60,7 @@ const Navbar = () => {
         {/* Navigation */}
         <div
           className={`${
-            isMenuOpen ? 'flex' : 'hidden'
+            isMenuOpen ? 'flex animate-rise' : 'hidden'
           } absolute left-0 top-full w-full flex-col gap-4 border-t border-gray-100 bg-white px-6 py-5 shadow-lg sm:static sm:flex sm:w-auto sm:flex-row sm:items-center sm:gap-6 sm:border-0 sm:p-0 sm:shadow-none`}
         >
           {navLinks.map((link) => (
@@ -69,7 +68,7 @@ const Navbar = () => {
               key={link.label}
               href={link.href}
               onClick={() => setIsMenuOpen(false)}
-              className="text-[15px] font-medium text-gray-700 transition hover:text-[#126b5b]"
+              className="text-[15px] font-medium text-gray-700 transition duration-200 hover:-translate-y-[1px] hover:text-brand"
             >
               {link.label}
             </a>
@@ -80,7 +79,7 @@ const Navbar = () => {
             <button
               type="button"
               onClick={handleAdminLogout}
-              className="inline-flex w-fit items-center justify-center rounded-lg bg-red-500 px-5 py-2 text-[15px] font-medium text-white transition hover:bg-red-600"
+              className="inline-flex w-fit items-center justify-center rounded-lg bg-red-500 px-5 py-2 text-[15px] font-medium text-white transition duration-200 hover:-translate-y-[1px] hover:bg-red-600"
             >
               Admin Logout
             </button>
@@ -95,7 +94,7 @@ const Navbar = () => {
                   setIsMenuOpen(false)
                   navigate('/profile')
                 }}
-                className="text-[15px] font-medium text-gray-700 transition hover:text-[#126b5b]"
+                className="text-[15px] font-medium text-gray-700 transition duration-200 hover:-translate-y-[1px] hover:text-brand"
               >
                 My Profile
               </button>
@@ -106,7 +105,7 @@ const Navbar = () => {
               <button
                 type="button"
                 onClick={handleLogout}
-                className="inline-flex w-fit items-center justify-center rounded-lg bg-red-500 px-5 py-2 text-[15px] font-medium text-white transition hover:bg-red-600"
+                className="inline-flex w-fit items-center justify-center rounded-lg bg-red-500 px-5 py-2 text-[15px] font-medium text-white transition duration-200 hover:-translate-y-[1px] hover:bg-red-600"
               >
                 Logout
               </button>
@@ -119,7 +118,7 @@ const Navbar = () => {
                   setIsMenuOpen(false)
                   navigate('/login')
                 }}
-                className="text-[15px] font-medium text-gray-700 transition hover:text-[#126b5b]"
+                className="text-[15px] font-medium text-gray-700 transition duration-200 hover:-translate-y-[1px] hover:text-brand"
               >
                 Login
               </button>
@@ -130,7 +129,7 @@ const Navbar = () => {
                   setIsMenuOpen(false)
                   navigate('/register')
                 }}
-                className="inline-flex w-fit items-center justify-center rounded-lg bg-[#126b5b] px-5 py-2 text-[15px] font-medium text-white transition hover:bg-[#0e5447]"
+                className="inline-flex w-fit items-center justify-center rounded-lg bg-brand px-5 py-2 text-[15px] font-medium text-white transition duration-200 hover:-translate-y-[1px] hover:bg-brand-strong"
               >
                 Register
               </button>
@@ -140,7 +139,7 @@ const Navbar = () => {
           {/* Existing Activity Button */}
           <a
             onClick={() => setIsMenuOpen(false)}
-            className="inline-flex w-fit cursor-pointer items-center justify-center rounded-lg bg-[#126b5b] px-5 py-2 text-[15px] font-medium text-white transition hover:bg-[#0e5447] focus:ring-2 focus:ring-[#126b5b] focus:ring-offset-1"
+            className="inline-flex w-fit cursor-pointer items-center justify-center rounded-lg bg-brand px-5 py-2 text-[15px] font-medium text-white transition duration-200 hover:-translate-y-[1px] hover:bg-brand-strong focus:ring-2 focus:ring-brand focus:ring-offset-1"
           >
             <Activity />
           </a>

@@ -33,21 +33,21 @@ const FAQ = () => {
   return (
     <section
       id="faq"
-      className="bg-[#F1F2FF] px-5 py-16 sm:px-6 sm:py-20"
+      className="bg-surface px-5 py-16 sm:px-6 sm:py-20 animate-rise"
     >
       <div className="mx-auto max-w-[1000px]">
 
         {/* Heading */}
         <div className="mb-8 text-center">
-          <p className="mb-2 text-[10px] font-bold uppercase tracking-[0.12em] text-[#007A78]">
+          <p className="animate-rise mb-2 text-[10px] font-bold uppercase tracking-[0.12em] text-brand">
             ✦ CLARIFICATIONS & GUIDANCE
           </p>
 
-          <h2 className="font-[Plus_Jakarta_Sans] text-[30px] font-semibold leading-tight tracking-[-0.5px] text-[#0F172A] sm:text-[34px]">
+          <h2 className="animate-rise font-[Plus_Jakarta_Sans] text-[30px] font-semibold leading-tight tracking-[-0.5px] text-[#0F172A] sm:text-[34px]" style={{ animationDelay: "90ms" }}>
             Frequently Asked Questions
           </h2>
 
-          <p className="mt-2 text-xs text-[#64748B] sm:text-[13px]">
+          <p className="animate-rise mt-2 text-xs text-[var(--text)] sm:text-[13px]" style={{ animationDelay: "150ms" }}>
             Have questions regarding your prescription order? Review our
             pharmacist guidance below.
           </p>
@@ -62,7 +62,8 @@ const FAQ = () => {
             return (
               <div
                 key={faq.question}
-                className="overflow-hidden rounded-lg border border-[#E2E8F0] bg-white"
+                className="animate-rise animate-lift overflow-hidden rounded-lg border border-[#E2E8F0] bg-white"
+                style={{ animationDelay: `${index * 110 + 180}ms` }}
               >
                 <button
                   type="button"
@@ -73,7 +74,7 @@ const FAQ = () => {
                   <span>{faq.question}</span>
 
                   <span
-                    className={`shrink-0 text-base font-bold text-[#007A78] transition-transform duration-200 ${
+                    className={`shrink-0 text-base font-bold text-brand transition-transform duration-200 ${
                       isOpen ? "rotate-180" : ""
                     }`}
                   >
@@ -95,11 +96,11 @@ const FAQ = () => {
         </div>
 
         {/* Pharmacist Help */}
-        <div className="mt-6 flex flex-col gap-4 rounded-xl bg-[#E6E8FF] px-5 py-5 sm:flex-row sm:items-center sm:justify-between">
+        <div className="animate-rise animate-lift mt-6 flex flex-col gap-4 rounded-xl bg-brand-soft px-5 py-5 sm:flex-row sm:items-center sm:justify-between" style={{ animationDelay: "540ms" }}>
 
           <div className="flex items-center gap-3">
 
-            <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full border border-[#0284C7] text-base font-bold text-[#0284C7]">
+            <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full border border-brand text-base font-bold text-brand">
               ?
             </div>
 
@@ -108,7 +109,7 @@ const FAQ = () => {
                 Still have a question about your medication?
               </h3>
 
-              <p className="mt-1 text-xs text-[#64748B] sm:text-[12px]">
+              <p className="mt-1 text-xs text-[var(--text)] sm:text-[12px]">
                 Our certified pharmacist hotline is open 24 hours a day, 7
                 days a week.
               </p>
@@ -117,8 +118,8 @@ const FAQ = () => {
           </div>
 
           <a
-            href="tel:+911800123456"
-            className="inline-flex min-h-[40px] items-center justify-center rounded-lg bg-[#007A78] px-5 text-sm font-bold text-white transition hover:bg-[#005F5E]"
+            href="tel:6392323282"
+            className="inline-flex min-h-[40px] items-center justify-center rounded-lg bg-brand px-5 text-sm font-bold text-white transition hover:bg-brand-strong"
           >
             ☎ &nbsp; Call Pharmacist
           </a>

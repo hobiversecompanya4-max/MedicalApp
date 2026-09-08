@@ -51,13 +51,13 @@ function Register() {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-[#f0faf7] via-white to-[#e9f7f3] flex items-center justify-center px-4 py-10">
+    <div className="min-h-screen bg-gradient-to-br from-[#f3fbf8] via-white to-[#e8f6f1] flex items-center justify-center px-4 py-10">
 
-      <div className="w-full max-w-md">
+      <div className="animate-rise w-full max-w-md">
 
         {/* Brand */}
         <div className="mb-8 text-center">
-          <div className="mx-auto mb-4 flex h-16 w-16 items-center justify-center rounded-2xl bg-[#126b5b] shadow-lg">
+          <div className="animate-float mx-auto mb-4 flex h-16 w-16 items-center justify-center rounded-2xl bg-brand shadow-lg shadow-brand/20">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 24 24"
@@ -79,7 +79,7 @@ function Register() {
           </div>
 
           <h1 className="text-3xl font-bold text-gray-900">
-            Quick <span className="text-[#126b5b]">Meds</span>
+            Panchawati <span className="text-brand">Meds</span>
           </h1>
 
           <p className="mt-2 text-sm text-gray-500">
@@ -88,7 +88,7 @@ function Register() {
         </div>
 
         {/* Register Card */}
-        <div className="rounded-3xl bg-white p-7 shadow-xl shadow-gray-200/60 sm:p-9">
+        <div className="animate-lift rounded-3xl bg-white p-7 shadow-xl shadow-gray-200/60 sm:p-9">
 
           <div className="mb-7">
             <h2 className="text-2xl font-bold text-gray-900">
@@ -96,7 +96,7 @@ function Register() {
             </h2>
 
             <p className="mt-1 text-sm text-gray-500">
-              Join Quick Meds and manage your healthcare with ease.
+              Join Panchawati Meds and manage your healthcare with ease.
             </p>
           </div>
 
@@ -137,7 +137,7 @@ function Register() {
                   onChange={handleChange}
                   placeholder="Enter your full name"
                   required
-                  className="w-full rounded-xl border border-gray-200 bg-gray-50 py-3.5 pl-12 pr-4 text-sm text-gray-900 outline-none transition focus:border-[#126b5b] focus:bg-white focus:ring-4 focus:ring-[#126b5b]/10"
+                  className="w-full rounded-xl border border-gray-200 bg-gray-50 py-3.5 pl-12 pr-4 text-sm text-gray-900 outline-none transition focus:border-brand focus:bg-white focus:ring-4 focus:ring-brand/10"
                 />
               </div>
             </div>
@@ -174,7 +174,7 @@ function Register() {
                   placeholder="Enter 10-digit phone number"
                   maxLength={10}
                   required
-                  className="w-full rounded-xl border border-gray-200 bg-gray-50 py-3.5 pl-12 pr-4 text-sm text-gray-900 outline-none transition focus:border-[#126b5b] focus:bg-white focus:ring-4 focus:ring-[#126b5b]/10"
+                  className="w-full rounded-xl border border-gray-200 bg-gray-50 py-3.5 pl-12 pr-4 text-sm text-gray-900 outline-none transition focus:border-brand focus:bg-white focus:ring-4 focus:ring-brand/10"
                 />
               </div>
             </div>
@@ -218,7 +218,7 @@ function Register() {
                   value={form.email}
                   onChange={handleChange}
                   placeholder="Enter your email address"
-                  className="w-full rounded-xl border border-gray-200 bg-gray-50 py-3.5 pl-12 pr-4 text-sm text-gray-900 outline-none transition focus:border-[#126b5b] focus:bg-white focus:ring-4 focus:ring-[#126b5b]/10"
+                  className="w-full rounded-xl border border-gray-200 bg-gray-50 py-3.5 pl-12 pr-4 text-sm text-gray-900 outline-none transition focus:border-brand focus:bg-white focus:ring-4 focus:ring-brand/10"
                 />
               </div>
             </div>
@@ -260,7 +260,7 @@ function Register() {
                   onChange={handleChange}
                   placeholder="Create a password"
                   required
-                  className="w-full rounded-xl border border-gray-200 bg-gray-50 py-3.5 pl-12 pr-4 text-sm text-gray-900 outline-none transition focus:border-[#126b5b] focus:bg-white focus:ring-4 focus:ring-[#126b5b]/10"
+                  className="w-full rounded-xl border border-gray-200 bg-gray-50 py-3.5 pl-12 pr-4 text-sm text-gray-900 outline-none transition focus:border-brand focus:bg-white focus:ring-4 focus:ring-brand/10"
                 />
               </div>
 
@@ -297,7 +297,7 @@ function Register() {
             <button
               type="submit"
               disabled={loading}
-              className="flex w-full items-center justify-center gap-2 rounded-xl bg-[#126b5b] py-3.5 text-sm font-semibold text-white shadow-lg shadow-[#126b5b]/20 transition hover:bg-[#0f5b4d] hover:shadow-xl disabled:cursor-not-allowed disabled:opacity-60"
+              className="flex w-full items-center justify-center gap-2 rounded-xl bg-brand py-3.5 text-sm font-semibold text-white shadow-lg shadow-brand/20 transition hover:bg-brand-strong hover:shadow-xl disabled:cursor-not-allowed disabled:opacity-60"
             >
               {loading ? (
                 <>
@@ -341,7 +341,7 @@ function Register() {
               <button
                 type="button"
                 onClick={() => navigate("/login")}
-                className="font-semibold text-[#126b5b] hover:underline"
+                className="font-semibold text-brand hover:underline"
               >
                 Login
               </button>
