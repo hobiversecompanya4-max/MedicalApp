@@ -31,32 +31,32 @@ const strengths = [
   },
 ];
 
-const occasions = [
-  {
-    title: "Marriages and ceremonies",
-    description:
-      "A refined setting for family milestones that deserve elegance and room to breathe.",
-    tone: "bg-brand-soft",
-    text: "text-brand-strong",
-    accent: "rgba(15, 118, 110, 0.34)",
-  },
-  {
-    title: "Parties and receptions",
-    description:
-      "A dependable option for joyful gatherings that need space, flow, and a welcoming atmosphere.",
-    tone: "bg-sky-soft",
-    text: "text-sky",
-    accent: "rgba(59, 130, 246, 0.32)",
-  },
-  {
-    title: "Festive occasions",
-    description:
-      "Ideal for cultural events, seasonal functions, and special get-togethers with a polished feel.",
-    tone: "bg-brand-soft",
-    text: "text-brand-strong",
-    accent: "rgba(15, 118, 110, 0.34)",
-  },
-];
+// const occasions = [
+//   {
+//     title: "Marriages and ceremonies",
+//     description:
+//       "A refined setting for family milestones that deserve elegance and room to breathe.",
+//     tone: "bg-brand-soft",
+//     text: "text-brand-strong",
+//     accent: "rgba(15, 118, 110, 0.34)",
+//   },
+//   {
+//     title: "Parties and receptions",
+//     description:
+//       "A dependable option for joyful gatherings that need space, flow, and a welcoming atmosphere.",
+//     tone: "bg-sky-soft",
+//     text: "text-sky",
+//     accent: "rgba(59, 130, 246, 0.32)",
+//   },
+//   {
+//     title: "Festive occasions",
+//     description:
+//       "Ideal for cultural events, seasonal functions, and special get-togethers with a polished feel.",
+//     tone: "bg-brand-soft",
+//     text: "text-brand-strong",
+//     accent: "rgba(15, 118, 110, 0.34)",
+//   },
+// ];
 
 const OtherPartners = () => {
   return (
@@ -130,7 +130,7 @@ const OtherPartners = () => {
                 Best for
               </p>
 
-              <div className="mt-5 space-y-4">
+              {/* <div className="mt-5 space-y-4">
                 {occasions.map((item) => (
                   <div
                     key={item.title}
@@ -145,7 +145,7 @@ const OtherPartners = () => {
                     </p>
                   </div>
                 ))}
-              </div>
+              </div> */}
 
               <div className="mt-6 rounded-2xl border border-white/80 bg-[linear-gradient(135deg,rgba(230,255,251,0.95),rgba(232,241,255,0.95))] p-4 shadow-sm">
                 <p className="text-xs font-semibold uppercase tracking-[0.12em] text-brand-strong">
