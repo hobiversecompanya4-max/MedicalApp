@@ -6,36 +6,49 @@
     "orientation": "portrait",
     "icon": "./assets/logo.png",
     "userInterfaceStyle": "light",
-    "splash": {
-      "image": "./assets/logo.png",
-      "resizeMode": "contain",
-      "backgroundColor": "#fbfefe"
-    },
+
     "ios": {
       "supportsTablet": true,
       "bundleIdentifier": "com.panchawatimeds.app"
     },
+
     "android": {
       "package": "com.panchawatimeds.app",
       "adaptiveIcon": {
         "foregroundImage": "./assets/logo.png",
-        "backgroundColor": "#0f766e"
-      }
+        "backgroundColor": "#fbfefe"
+      },
+      "permissions": [
+        "android.permission.RECORD_AUDIO"
+      ]
     },
+
     "plugins": [
+      [
+        "expo-splash-screen",
+        {
+          "image": "./assets/logo.png",
+          "backgroundColor": "#fbfefe",
+          "imageWidth": 200
+        }
+      ],
       [
         "expo-image-picker",
         {
           "photosPermission": "Allow Panchawati Meds to access your photo library so you can upload a prescription image.",
-          "cameraPermission": "Allow Panchawati Meds to use your camera to capture a prescription image."
+          "cameraPermission": "Allow Panchawati Meds to capture a prescription image."
         }
       ],
       "expo-asset",
       "expo-font",
       "expo-status-bar"
     ],
+
     "extra": {
-      "apiUrl": "http://10.0.2.2:5000/api"
+      "apiUrl": "https://medicalapp-twhy.onrender.com/api",
+      "eas": {
+        "projectId": "f386c8b5-1da4-43dd-9e1b-7385f54d33dd"
+      }
     }
   }
 }

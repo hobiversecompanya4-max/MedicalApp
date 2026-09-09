@@ -1,22 +1,24 @@
 import Constants from "expo-constants";
 
 /**
- * Where the Express backend lives.
+ * Backend API URL
  *
- * Update per environment:
- *  - iOS simulator ........ http://localhost:5000/api
- *  - Android emulator ..... http://10.0.2.2:5000/api
- *  - Physical device ...... http://<your-computer-LAN-IP>:5000/api
- *                           (e.g. http://192.168.1.23:5000/api)
- *
- * You can also override it in app.json -> expo.extra.apiUrl without
- * changing any source code.
+ * Priority:
+ * 1. app.json / app.config.js -> expo.extra.apiUrl
+ * 2. EXPO_PUBLIC_API_URL
+ * 3. Production backend URL
  */
+
 const EXTRA_API_URL = Constants.expoConfig?.extra?.apiUrl;
 
-export const API_URL = EXTRA_API_URL || "http://10.0.2.2:5000/api";
+const ENV_API_URL = process.env.EXPO_PUBLIC_API_URL;
 
-export const STORE_PHONE = "6392323282"; // pharmacist support line
+export const API_URL =
+  EXTRA_API_URL ||
+  ENV_API_URL ||
+  "https://medicalapp-twhy.onrender.com/api";
+
+export const STORE_PHONE = "6392323282";
 export const STORE_PHONE_DISPLAY = "+91 63923 23282";
 
 export const STORE_CONTACT = {

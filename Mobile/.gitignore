@@ -1,0 +1,32 @@
+node_modules/
+
+# Expo
+.expo/
+.expo-shared/
+dist/
+web-build/
+
+# Environment variables
+.env
+.env.local
+.env.*.local
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Native signing files
+*.keystore
+*.jks
+*.p8
+*.p12
+*.key
+
+# IDE
+.vscode/
+.idea/

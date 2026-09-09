@@ -17,13 +17,13 @@ export default function OrderScreen() {
   const loggedIn = isLoggedIn();
 
   // Keep the guard reactive when the tab regains focus.
-  useFocusEffect(
-    useCallback(() => {
-      if (!isLoggedIn()) {
-        navigation.navigate("Login");
-      }
-    }, [navigation])
-  );
+  // useFocusEffect(
+  //   useCallback(() => {
+  //     if (!isLoggedIn()) {
+  //       navigation.navigate("Login");
+  //     }
+  //   }, [navigation])
+  // );
 
   if (!loggedIn) {
     return (
