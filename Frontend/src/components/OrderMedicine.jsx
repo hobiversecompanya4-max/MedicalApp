@@ -1,8 +1,10 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import api from "../services/api";
 import { getToken } from "../services/auth";
 
 const OrderMedicine = () => {
+  const navigate = useNavigate();
   const [prescription, setPrescription] = useState(null);
 
   const [formData, setFormData] = useState({
@@ -80,10 +82,6 @@ const OrderMedicine = () => {
         },
       });
 
-      alert(
-        `Order submitted successfully!\nOrder ID: ${response.data.orderId}`
-      );
-
       setFormData({
         name: "",
         phone: "",
@@ -95,6 +93,13 @@ const OrderMedicine = () => {
 
       setMedicines([]);
       setPrescription(null);
+      navigate("/", {
+        state: {
+          orderSuccess: {
+            orderId: response.data.orderId,
+          },
+        },
+      });
     } catch (error) {
       console.error("Order submission failed:", error);
 
