@@ -54,8 +54,8 @@ function Register() {
     <div className="flex min-h-screen items-center justify-center bg-gradient-to-br from-[#f3fbf8] via-white to-[#e8f6f1] px-4 py-6 sm:py-10">
 
       <div className="animate-rise grid w-full max-w-6xl overflow-hidden rounded-[2rem] border border-white/80 bg-white shadow-2xl shadow-gray-200/60 md:grid-cols-[0.9fr_1.1fr]">
-        <div className="relative hidden min-h-[760px] overflow-hidden md:flex md:items-start p-10">
-          <img src="/hero.png" alt="Panchawati Medical care" className="absolute inset-0 h-full w-full object-cover" />
+        <div className="relative hidden min-h-[760px] overflow-hidden bg-[#06211d] p-10 md:flex md:items-start">
+          <img src="/hero.png" alt="Panchawati Medical care" className="absolute inset-0 h-full w-full object-cover object-center md:inset-x-0 md:inset-y-auto md:h-[420px] md:object-[center_top]" />
           <div aria-hidden="true" className="absolute inset-0 bg-gradient-to-b from-[#06211d]/80 via-[#0b5f59]/45 to-[#06211d]/55" />
           <div className="relative z-10 pt-2 text-white">
             <p className="text-xs font-bold uppercase tracking-[0.18em] text-emerald-200 drop-shadow-[0_1px_2px_rgba(0,0,0,0.8)]">Panchawati Medical</p>

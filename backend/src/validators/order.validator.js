@@ -83,8 +83,9 @@ const validateOrder = (req, res, next) => {
   }
 
   if (
-    medicines &&
-    (!Array.isArray(medicines) || medicines.length === 0)
+    medicines !== undefined &&
+    medicines !== null &&
+    !Array.isArray(medicines)
   ) {
     return res.status(400).json({
       success: false,

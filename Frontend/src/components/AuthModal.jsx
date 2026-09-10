@@ -64,8 +64,8 @@ const AuthModal = ({ mode = 'login', onClose }) => {
           <X size={19} />
         </button>
 
-        <div className="relative mb-7 flex min-h-[300px] items-start overflow-hidden rounded-[1.5rem] p-5 sm:row-span-3 sm:mb-0 sm:min-h-[560px] sm:rounded-none sm:p-10">
-          <img src="/hero.png" alt="Panchawati Medical care" className="absolute inset-0 h-full w-full object-cover" />
+        <div className="relative mb-7 flex min-h-[300px] items-start overflow-hidden rounded-[1.5rem] bg-[#06211d] p-5 sm:row-span-3 sm:mb-0 sm:min-h-[560px] sm:rounded-none sm:p-10">
+          <img src="/hero.png" alt="Panchawati Medical care" className="absolute inset-0 h-full w-full object-cover object-center sm:inset-x-0 sm:inset-y-auto sm:h-[360px] sm:object-[center_top]" />
           <div aria-hidden="true" className="absolute inset-0 bg-gradient-to-b from-[#06211d]/80 via-[#0b5f59]/45 to-[#06211d]/55" />
           <div className="relative z-10 pt-5 text-white sm:pt-2">
             <p className="text-xs font-bold uppercase tracking-[0.18em] text-emerald-200 drop-shadow-[0_1px_2px_rgba(0,0,0,0.8)]">Panchawati Medical</p>

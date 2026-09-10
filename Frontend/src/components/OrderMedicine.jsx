@@ -57,7 +57,9 @@ const OrderMedicine = () => {
         })
       );
 
-      data.append("medicines", JSON.stringify(medicines));
+      if (medicines.length > 0) {
+        data.append("medicines", JSON.stringify(medicines));
+      }
 
       data.append("prescriptionRequired", "true");
       data.append("paymentMethod", "COD");
@@ -130,37 +132,37 @@ const OrderMedicine = () => {
 
   return (
     <section id="order" className="min-h-screen bg-gradient-to-br from-[#f3fbf8] via-white to-[#e8f6f1] px-4 py-6 animate-rise sm:py-10">
-      <div className="mx-auto grid w-full max-w-6xl overflow-hidden rounded-[2rem] border border-white/80 bg-white shadow-2xl shadow-gray-200/60 md:grid-cols-[0.9fr_1.1fr]">
-        <div className="relative hidden min-h-[900px] overflow-hidden md:flex md:items-start p-10">
-          <img src="/hero.png" alt="Panchawati Medical care" className="absolute inset-0 h-full w-full object-cover" />
+      <div className="mx-auto grid w-full max-w-6xl overflow-hidden rounded-[1.5rem] border border-white/80 bg-white shadow-2xl shadow-gray-200/60 sm:rounded-[2rem] md:grid-cols-[0.9fr_1.1fr]">
+        <div className="relative flex min-h-[190px] items-start overflow-hidden bg-[#06211d] p-5 sm:min-h-[230px] sm:p-8 md:min-h-[900px] md:p-10">
+          <img src="/hero.png" alt="Panchawati Medical care" className="absolute inset-0 h-full w-full object-cover object-center md:inset-x-0 md:inset-y-auto md:h-[500px] md:object-[center_top]" />
           <div aria-hidden="true" className="absolute inset-0 bg-gradient-to-b from-[#06211d]/80 via-[#0b5f59]/45 to-[#06211d]/55" />
           <div className="relative z-10 pt-2 text-white">
             <p className="text-xs font-bold uppercase tracking-[0.18em] text-emerald-200 drop-shadow-[0_1px_2px_rgba(0,0,0,0.8)]">Panchawati Medical</p>
-            <h2 className="mt-3 text-3xl font-bold leading-tight drop-shadow-[0_2px_3px_rgba(0,0,0,0.85)]">Your medicines, prepared with care.</h2>
-            <p className="mt-3 max-w-sm text-sm leading-6 text-white drop-shadow-[0_1px_3px_rgba(0,0,0,0.85)]">Upload your prescription and let our pharmacist team help make your order simple, safe, and convenient.</p>
+            <h2 className="mt-2 max-w-xl text-2xl font-bold leading-tight drop-shadow-[0_2px_3px_rgba(0,0,0,0.85)] sm:text-3xl">Your medicines, prepared with care.</h2>
+            <p className="mt-2 max-w-sm text-xs leading-5 text-white drop-shadow-[0_1px_3px_rgba(0,0,0,0.85)] sm:text-sm sm:leading-6">Upload your prescription and let our pharmacist team help make your order simple, safe, and convenient.</p>
           </div>
         </div>
 
-        <div className="w-full p-1 sm:p-3">
+        <div className="min-w-0 w-full p-1 sm:p-3">
 
         {/* Section Heading */}
-        <div className="mb-10 px-5 pt-5 text-center sm:px-6 sm:pt-6">
+        <div className="mb-7 px-4 pt-5 text-center sm:mb-10 sm:px-6 sm:pt-6">
           <span className="inline-flex items-center rounded-full bg-brand-soft px-4 py-2 text-xs font-semibold text-brand">
             ORDER MEDICINE
           </span>
 
-          <h2 className="mt-4 text-3xl md:text-4xl font-bold text-[#0F172A]">
+          <h2 className="mt-4 text-2xl font-bold leading-tight text-[#0F172A] sm:text-3xl md:text-4xl">
             Order Medicines with a Doctor's Prescription
           </h2>
 
-          <p className="mt-3 max-w-2xl mx-auto text-sm md:text-base text-[#64748B]">
+          <p className="mx-auto mt-3 max-w-2xl text-sm leading-6 text-[#64748B] md:text-base">
             Upload your prescription, provide your delivery details, and our
             pharmacist will verify your medicines before delivery.
           </p>
         </div>
 
         {/* Form Card */}
-        <div className="animate-rise animate-lift rounded-3xl border border-[#E2E8F0] bg-white p-6 shadow-xl shadow-gray-200/40 md:p-8">
+        <div className="animate-rise animate-lift rounded-2xl border border-[#E2E8F0] bg-white p-4 shadow-xl shadow-gray-200/40 sm:rounded-3xl sm:p-6 md:p-8">
 
           <form onSubmit={handleSubmit} className="space-y-7">
 
@@ -363,7 +365,7 @@ const OrderMedicine = () => {
                 </span>
               </div>
 
-              <div className="flex flex-col sm:flex-row gap-3">
+              <div className="flex flex-col gap-3 sm:flex-row">
 
                 <input
                   id="medicine"
@@ -377,7 +379,7 @@ const OrderMedicine = () => {
                 <button
                   type="button"
                   onClick={addMedicine}
-                  className="h-12 px-6 rounded-lg border border-brand text-brand font-semibold text-sm hover:bg-brand-soft transition"
+                  className="h-12 w-full rounded-lg border border-brand px-6 text-sm font-semibold text-brand transition hover:bg-brand-soft sm:w-auto"
                 >
                   + Add Medicine
                 </button>
