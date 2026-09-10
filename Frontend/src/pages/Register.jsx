@@ -51,9 +51,20 @@ function Register() {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-[#f3fbf8] via-white to-[#e8f6f1] flex items-center justify-center px-4 py-10">
+    <div className="flex min-h-screen items-center justify-center bg-gradient-to-br from-[#f3fbf8] via-white to-[#e8f6f1] px-4 py-6 sm:py-10">
 
-      <div className="animate-rise w-full max-w-md">
+      <div className="animate-rise grid w-full max-w-6xl overflow-hidden rounded-[2rem] border border-white/80 bg-white shadow-2xl shadow-gray-200/60 md:grid-cols-[0.9fr_1.1fr]">
+        <div className="relative hidden min-h-[760px] overflow-hidden md:flex md:items-start p-10">
+          <img src="/hero.png" alt="Panchawati Medical care" className="absolute inset-0 h-full w-full object-cover" />
+          <div aria-hidden="true" className="absolute inset-0 bg-gradient-to-b from-[#06211d]/80 via-[#0b5f59]/45 to-[#06211d]/55" />
+          <div className="relative z-10 pt-2 text-white">
+            <p className="text-xs font-bold uppercase tracking-[0.18em] text-emerald-200 drop-shadow-[0_1px_2px_rgba(0,0,0,0.8)]">Panchawati Medical</p>
+            <h2 className="mt-3 text-3xl font-bold drop-shadow-[0_2px_3px_rgba(0,0,0,0.85)]">Join our care community</h2>
+            <p className="mt-2 max-w-sm text-sm leading-6 text-white drop-shadow-[0_1px_3px_rgba(0,0,0,0.85)]">Create your account for simpler ordering, pharmacist support, and regular-customer savings.</p>
+          </div>
+        </div>
+
+        <div className="w-full p-1 sm:p-3">
 
         {/* Brand */}
         <div className="mb-8 text-center">
@@ -375,6 +386,7 @@ function Register() {
           Your information is securely protected
         </div>
 
+        </div>
       </div>
     </div>
   );

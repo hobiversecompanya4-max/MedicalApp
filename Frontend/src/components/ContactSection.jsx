@@ -1,25 +1,16 @@
-import React from "react";
-
 import {
   Phone,
   Mail,
   MapPin,
   Clock,
-  MessageCircle,
   Send,
   ExternalLink,
 } from "lucide-react";
 
-import {
-  FaInstagram,
-  FaFacebookF,
-  FaTwitter,
-  FaYoutube,
-  FaWhatsapp,
-} from "react-icons/fa";
+import { FaWhatsapp } from "react-icons/fa";
 
 const ContactSection = () => {
-  const storePhone = "+919876543210";
+  const storePhone = "6392323282";
   const storeEmail = "info@yourmedicalstore.com";
 
   const mapUrl = "https://maps.app.goo.gl/iHdoo14SYty1eU426";
@@ -27,17 +18,20 @@ const ContactSection = () => {
   return (
     <section
       id="contact"
-      className="bg-white px-4 py-20 sm:px-6 lg:px-8 animate-rise"
+      className="relative overflow-hidden bg-[linear-gradient(180deg,#f4fbf7_0%,#ffffff_48%,#eef7ff_100%)] px-4 py-16 sm:px-6 sm:py-20 lg:px-8 animate-rise"
     >
-      <div className="mx-auto max-w-7xl">
+      <div aria-hidden="true" className="pointer-events-none absolute -right-24 top-8 h-72 w-72 rounded-full bg-brand-soft/70 blur-3xl" />
+      <div aria-hidden="true" className="pointer-events-none absolute -left-32 bottom-20 h-80 w-80 rounded-full bg-sky-soft/70 blur-3xl" />
+
+      <div className="relative z-10 mx-auto max-w-7xl">
 
         {/* ================= HEADER ================= */}
         <div className="mx-auto mb-14 max-w-2xl text-center">
-          <span className="animate-rise mb-3 inline-block rounded-full bg-brand-soft px-4 py-2 text-sm font-semibold text-brand">
+          <span className="animate-rise mb-4 inline-flex rounded-full border border-brand/15 bg-white/80 px-4 py-2 text-xs font-bold uppercase tracking-[0.16em] text-brand shadow-sm">
             Contact Us
           </span>
 
-          <h2 className="animate-rise text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl" style={{ animationDelay: "90ms" }}>
+          <h2 className="animate-rise font-[Plus_Jakarta_Sans] text-3xl font-bold tracking-tight text-[#0B2B26] sm:text-5xl" style={{ animationDelay: "90ms" }}>
             We're Here to Help You
           </h2>
 
@@ -51,7 +45,7 @@ const ContactSection = () => {
         <div className="grid gap-8 lg:grid-cols-2">
 
           {/* ================= CONTACT INFORMATION ================= */}
-          <div className="animate-rise animate-lift rounded-3xl bg-surface p-6 sm:p-8">
+          <div className="animate-rise animate-lift rounded-[2rem] border border-white/80 bg-white/85 p-6 shadow-[0_18px_50px_rgba(11,59,52,0.08)] backdrop-blur-sm sm:p-8">
 
             <h3 className="text-2xl font-bold text-gray-900">
               Get in Touch
@@ -78,7 +72,7 @@ const ContactSection = () => {
                   </p>
 
                   <p className="mt-1 font-semibold text-gray-900">
-                    +91 98765 43210
+                    6392323282
                   </p>
 
                   <p className="mt-1 text-sm text-gray-500">
@@ -154,9 +148,9 @@ const ContactSection = () => {
                   </p>
 
                   <p className="mt-1 font-semibold leading-6 text-gray-900">
-                    Your Medical Store
+                    Panchwati Medical
                     <br />
-                    Lucknow, Uttar Pradesh, India
+                    Azamgarh, Uttar Pradesh
                   </p>
 
                   <span className="mt-2 inline-flex items-center gap-1 text-sm font-semibold text-brand">
@@ -201,7 +195,7 @@ const ContactSection = () => {
           <div className="flex flex-col gap-6">
 
             {/* ASSISTANCE CARD */}
-            <div className="animate-rise animate-lift rounded-3xl bg-brand p-8 text-white">
+            <div className="animate-rise animate-lift rounded-[2rem] bg-[linear-gradient(145deg,#0fa67f_0%,#0b7e60_58%,#0b3b34_100%)] p-8 text-white shadow-[0_18px_50px_rgba(11,126,96,0.24)]">
 
               <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-white/15">
                 <Send size={24} />
@@ -243,190 +237,22 @@ const ContactSection = () => {
             </div>
 
             {/* ================= SOCIAL MEDIA ================= */}
-            <div className="animate-rise animate-lift rounded-3xl border border-gray-100 bg-white p-8 shadow-sm" style={{ animationDelay: "120ms" }}>
+            <div className="animate-rise animate-lift rounded-[2rem] border border-white/80 bg-white/85 p-8 shadow-[0_18px_45px_rgba(15,23,42,0.06)] backdrop-blur-sm" style={{ animationDelay: "120ms" }}>
 
               <h3 className="text-xl font-bold text-gray-900">
                 Follow Us
               </h3>
 
               <p className="mt-2 text-sm leading-6 text-gray-600">
-                Stay connected with us for updates, offers, health tips,
-                and the latest information.
+                Our social media channels are being prepared. Follow us here
+                for updates, offers, and health tips soon.
               </p>
 
-              <div className="mt-6 grid grid-cols-1 gap-3 sm:grid-cols-2">
-
-                {/* INSTAGRAM */}
-                <a
-                  href="https://instagram.com/yourmedicalstore"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="group flex items-center gap-3 rounded-xl border border-gray-100 p-4 transition-all duration-200 hover:border-pink-200 hover:bg-pink-50"
-                >
-                  <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-pink-50 text-pink-500 group-hover:bg-white">
-                    <FaInstagram size={20} />
-                  </div>
-
-                  <div>
-                    <p className="text-xs text-gray-500">
-                      Instagram
-                    </p>
-
-                    <p className="text-sm font-semibold text-gray-900">
-                      @yourmedicalstore
-                    </p>
-                  </div>
-                </a>
-
-                {/* FACEBOOK */}
-                <a
-                  href="https://facebook.com/yourmedicalstore"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="group flex items-center gap-3 rounded-xl border border-gray-100 p-4 transition-all duration-200 hover:border-brand/30 hover:bg-brand-soft"
-                >
-                  <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-brand-soft text-brand group-hover:bg-white">
-                    <FaFacebookF size={18} />
-                  </div>
-
-                  <div>
-                    <p className="text-xs text-gray-500">
-                      Facebook
-                    </p>
-
-                    <p className="text-sm font-semibold text-gray-900">
-                      Your Medical Store
-                    </p>
-                  </div>
-                </a>
-
-                {/* TWITTER / X */}
-                <a
-                  href="https://x.com/yourmedicalstore"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="group flex items-center gap-3 rounded-xl border border-gray-100 p-4 transition-all duration-200 hover:border-gray-300 hover:bg-gray-50"
-                >
-                  <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-gray-100 text-gray-900 group-hover:bg-white">
-                    <FaTwitter size={18} />
-                  </div>
-
-                  <div>
-                    <p className="text-xs text-gray-500">
-                      X / Twitter
-                    </p>
-
-                    <p className="text-sm font-semibold text-gray-900">
-                      @yourmedicalstore
-                    </p>
-                  </div>
-                </a>
-
-                {/* YOUTUBE */}
-                <a
-                  href="https://youtube.com/@yourmedicalstore"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="group flex items-center gap-3 rounded-xl border border-gray-100 p-4 transition-all duration-200 hover:border-red-200 hover:bg-red-50"
-                >
-                  <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-red-50 text-red-600 group-hover:bg-white">
-                    <FaYoutube size={20} />
-                  </div>
-
-                  <div>
-                    <p className="text-xs text-gray-500">
-                      YouTube
-                    </p>
-
-                    <p className="text-sm font-semibold text-gray-900">
-                      Your Medical Store
-                    </p>
-                  </div>
-                </a>
-
+              <div className="mt-6 flex items-center gap-3 rounded-2xl border border-brand/10 bg-brand-soft/70 px-4 py-3">
+                <span className="h-2.5 w-2.5 rounded-full bg-amber shadow-[0_0_0_5px_rgba(232,147,12,0.12)]" />
+                <p className="text-sm font-bold text-brand-strong">Coming soon</p>
               </div>
             </div>
-          </div>
-        </div>
-
-        {/* ================= GOOGLE MAP ================= */}
-        <div className="mt-8 overflow-hidden rounded-3xl border border-gray-100 bg-white shadow-sm">
-
-          {/* Map Header */}
-          <div className="flex flex-col gap-4 p-6 sm:flex-row sm:items-center sm:justify-between">
-
-            <div>
-              <h3 className="text-xl font-bold text-gray-900">
-                Visit Our Store
-              </h3>
-
-              <p className="mt-1 text-sm text-gray-600">
-                Find us easily and get directions through Google Maps.
-              </p>
-            </div>
-
-            <a
-              href={mapUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex w-fit items-center gap-2 rounded-xl bg-gray-900 px-5 py-3 text-sm font-semibold text-white transition-all duration-200 hover:bg-gray-800"
-            >
-              <MapPin size={18} />
-              Open in Google Maps
-              <ExternalLink size={15} />
-            </a>
-
-          </div>
-
-          {/* Map */}
-          <div className="h-72 bg-gray-100 sm:h-96">
-            <iframe
-              title="Medical Store Location"
-              src="https://www.google.com/maps?q=Lucknow%2C%20Uttar%20Pradesh&output=embed"
-              className="h-full w-full border-0"
-              loading="lazy"
-              allowFullScreen
-              referrerPolicy="no-referrer-when-downgrade"
-            />
-          </div>
-
-        </div>
-
-        {/* ================= BOTTOM CONTACT STRIP ================= */}
-        <div className="mt-8 rounded-2xl bg-gray-900 px-6 py-5">
-
-          <div className="flex flex-col items-center justify-between gap-4 text-center sm:flex-row sm:text-left">
-
-            <div>
-              <p className="font-semibold text-white">
-                Have a question?
-              </p>
-
-              <p className="mt-1 text-sm text-gray-400">
-                Our team is just a call or message away.
-              </p>
-            </div>
-
-            <div className="flex flex-wrap justify-center gap-3">
-
-              <a
-                href={`tel:${storePhone}`}
-                className="inline-flex items-center gap-2 rounded-lg bg-white px-4 py-2.5 text-sm font-semibold text-gray-900 transition hover:bg-gray-100"
-              >
-                <Phone size={16} />
-                Call Us
-              </a>
-
-              <a
-                href={`mailto:${storeEmail}`}
-                className="inline-flex items-center gap-2 rounded-lg border border-gray-700 px-4 py-2.5 text-sm font-semibold text-white transition hover:bg-gray-800"
-              >
-                <Mail size={16} />
-                Email Us
-              </a>
-
-            </div>
-
           </div>
         </div>
 

@@ -34,8 +34,42 @@ const FAQ = () => {
   return (
     <section
       id="faq"
-      className="bg-[linear-gradient(180deg,rgba(247,251,250,0.78),rgba(244,238,255,0.72))] px-5 py-16 sm:px-6 sm:py-20 animate-rise backdrop-blur-sm"
+      className="relative bg-[linear-gradient(180deg,rgba(247,251,250,0.78),rgba(244,238,255,0.72))] px-5 py-16 sm:px-6 sm:py-20 animate-rise backdrop-blur-sm overflow-hidden"
     >
+      {/* AI-generated medical shield artwork */}
+      <div
+        aria-hidden="true"
+        className="pointer-events-none absolute -right-10 top-0 h-[280px] w-[280px] sm:-right-16 sm:h-[380px] sm:w-[380px] lg:-right-20 lg:h-[460px] lg:w-[460px] opacity-60"
+        style={{ animation: "blob-drift 18s ease-in-out infinite alternate" }}
+      >
+        <img
+          src="/ai/cross-art.svg"
+          alt=""
+          className="h-full w-full object-cover"
+          loading="lazy"
+        />
+      </div>
+
+      {/* Floating medical icons */}
+      <div
+        aria-hidden="true"
+        className="pointer-events-none absolute left-8 top-20 h-20 w-20 sm:left-12 sm:top-28 sm:h-24 sm:w-24 lg:left-16 lg:top-36 lg:h-28 lg:w-28 animate-lift"
+        style={{ animationDelay: "0.4s" }}
+      >
+        <span
+          className="absolute left-2 top-2 text-3xl sm:text-4xl"
+          style={{ animation: "pill-float 9s ease-in-out infinite" }}
+        >
+          🏥
+        </span>
+        <span
+          className="absolute right-1 top-5 text-2xl sm:text-3xl"
+          style={{ animation: "pill-float 7s ease-in-out infinite 1s" }}
+        >
+          💊
+        </span>
+      </div>
+
       <div className="mx-auto max-w-[1000px]">
         <div className="mx-auto mb-8 max-w-3xl text-center">
           <p className="animate-rise mb-2 inline-flex items-center gap-2 rounded-full border border-brand/15 bg-[linear-gradient(135deg,rgba(230,255,251,0.95),rgba(232,241,255,0.95),rgba(255,246,232,0.92))] px-4 py-2 text-[10px] font-bold uppercase tracking-[0.16em] text-brand-strong shadow-sm">
@@ -66,9 +100,15 @@ const FAQ = () => {
             return (
               <div
                 key={faq.question}
-                className="animate-rise animate-lift overflow-hidden rounded-3xl border border-[#dbe7e4] bg-white/90 shadow-[0_1px_3px_rgba(15,23,42,0.04)] backdrop-blur-sm"
-                style={{ animationDelay: `${index * 110 + 200}ms` }}
+                className="group relative overflow-hidden rounded-3xl border border-[#dbe7e4] bg-white/90 shadow-[0_1px_3px_rgba(15,23,42,0.04)] backdrop-blur-sm transition-all duration-300 hover:-translate-y-0.5 hover:border-brand/20 hover:shadow-[0_12px_28px_rgba(15,23,42,0.08)]"
+                style={{ animation: "rise-up 0.6s cubic-bezier(0.16,1,0.3,1) both", animationDelay: `${index * 110 + 200}ms` }}
               >
+                {/* Hover glow */}
+                <div
+                  aria-hidden="true"
+                  className="pointer-events-none absolute -right-4 -left-4 h-8 w-8 rounded-full bg-gradient-to-br from-brand-soft/60 to-sky-soft/60 blur-2xl opacity-0 transition-all duration-500 group-hover:opacity-100"
+                />
+
                 <button
                   type="button"
                   onClick={() => toggleFAQ(index)}
@@ -78,16 +118,19 @@ const FAQ = () => {
                   <span>{faq.question}</span>
 
                   <span
-                    className={`flex h-9 w-9 shrink-0 items-center justify-center rounded-full border border-brand/10 bg-brand-soft text-brand-strong transition-transform duration-200 ${
+                    className={`flex h-9 w-9 shrink-0 items-center justify-center rounded-full border border-brand/10 bg-brand-soft text-brand-strong transition-transform duration-300 ${
                       isOpen ? "rotate-180" : ""
                     }`}
                   >
-                    <ChevronDown size={18} />
+                    <ChevronDown size={18} className="transition-transform duration-300 group-hover:scale-110" />
                   </span>
                 </button>
 
                 {isOpen && (
-                  <div className="border-t border-[#eef2f1] px-5 pb-5 pt-1 sm:px-6">
+                  <div
+                    className="border-t border-[#eef2f1] px-5 pb-5 pt-1 sm:px-6"
+                    style={{ animation: "lift-in 0.4s cubic-bezier(0.16,1,0.3,1) both", animationDelay: "50ms" }}
+                  >
                     <p className="max-w-[900px] text-sm leading-6 text-[var(--text)]">
                       {faq.answer}
                     </p>
@@ -99,11 +142,11 @@ const FAQ = () => {
         </div>
 
         <div
-          className="animate-rise animate-lift mt-7 flex flex-col gap-4 rounded-3xl border border-brand/15 bg-[linear-gradient(135deg,rgba(230,255,251,0.92),rgba(232,241,255,0.92),rgba(255,246,232,0.9))] px-5 py-5 shadow-[0_12px_30px_rgba(15,23,42,0.06)] sm:flex-row sm:items-center sm:justify-between sm:px-6"
+          className="relative z-10 animate-rise animate-lift mt-7 flex flex-col gap-4 rounded-3xl border border-brand/15 bg-[linear-gradient(135deg,rgba(230,255,251,0.92),rgba(232,241,255,0.92),rgba(255,246,232,0.9))] px-5 py-5 shadow-[0_12px_30px_rgba(15,23,42,0.06)] sm:flex-row sm:items-center sm:justify-between sm:px-6 transition-all duration-300 hover:shadow-md"
           style={{ animationDelay: "540ms" }}
         >
           <div className="flex items-center gap-3">
-            <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-2xl bg-white text-brand shadow-sm">
+            <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-2xl bg-white text-brand shadow-sm transition-transform duration-300 hover:scale-110">
               <PhoneCall size={18} />
             </div>
 
@@ -121,7 +164,7 @@ const FAQ = () => {
 
           <a
             href="tel:6392323282"
-            className="inline-flex min-h-[44px] items-center justify-center rounded-2xl bg-brand px-5 text-sm font-bold text-white transition hover:bg-brand-strong"
+            className="relative z-20 inline-flex min-h-[46px] min-w-[170px] items-center justify-center whitespace-nowrap rounded-2xl bg-brand px-5 text-sm font-bold text-white shadow-[0_6px_20px_rgba(15,118,110,0.25)] transition-all duration-300 hover:bg-brand-strong hover:shadow-lg hover:shadow-brand/30 active:scale-95"
           >
             Call Pharmacist
           </a>

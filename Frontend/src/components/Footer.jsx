@@ -38,12 +38,6 @@ const Footer = () => {
             <a href="/" className="transition hover:text-brand">
               Home
             </a>
-            <a
-              href="/#how-it-works"
-              className="transition hover:text-brand"
-            >
-              How It Works
-            </a>
             <a href="/order" className="transition hover:text-brand">
               Order Medicine
             </a>
@@ -111,12 +105,20 @@ const Footer = () => {
           </p>
 
           <p>
-            Maintained by hobiverse.companyA4
+            Maintained by hobiverse.companya4@gmail.com
           </p>
 
           <p>
             Designed, Developed and hosted by hobiverse.companyA4
           </p>
+
+          <p>
+            Last updated: {new Date().toLocaleString(undefined, {
+              dateStyle: "medium",
+              timeStyle: "short",
+            })}
+          </p>
+
         </div>
 
         <nav

@@ -13,32 +13,35 @@ import SafetyVerification from "./pages/SafetyVerification.jsx";
 import PrivacyPolicy from "./pages/PrivacyPolicy.jsx";
 import TermsOfService from "./pages/TermsOfService.jsx";
 import SafetyGuidelines from "./pages/SafetyGuidelines.jsx";
+import ScrollProgress from "./components/ScrollProgress";
+
 function App() {
   useEffect(() => {
-  api.get("/health")
-    .then((data) => {
-      console.log("Backend connected:", data);
-    })
-    .catch((error) => {
-      console.error("Backend connection failed:", error);
-    });
-}, []);
+    api.get("/health")
+      .then((data) => {
+        console.log("Backend connected:", data);
+      })
+      .catch((error) => {
+        console.error("Backend connection failed:", error);
+      });
+  }, []);
   return (
     <BrowserRouter>
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/order" element={<Order />} />
-          <Route path="/contact" element={<Contact />} />
-          <Route path="/safety" element={<SafetyVerification />} />
-          <Route path="/privacy" element={<PrivacyPolicy />} />
-          <Route path="/terms" element={<TermsOfService />} />
-          <Route path="/safety-guidelines" element={<SafetyGuidelines />} />
-          <Route path="/login" element={<Home authMode="login" />} />
-          <Route path="/register" element={<Home authMode="register" />} />
-          <Route path="/profile" element={<Profile />} />
-          <Route path="/admin/login" element={<AdminLogin />} />
-          <Route path="/admin" element={<Admin />} />
-        </Routes>
+      <ScrollProgress />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/order" element={<Order />} />
+        <Route path="/contact" element={<Contact />} />
+        <Route path="/safety" element={<SafetyVerification />} />
+        <Route path="/privacy" element={<PrivacyPolicy />} />
+        <Route path="/terms" element={<TermsOfService />} />
+        <Route path="/safety-guidelines" element={<SafetyGuidelines />} />
+        <Route path="/login" element={<Home authMode="login" />} />
+        <Route path="/register" element={<Home authMode="register" />} />
+        <Route path="/profile" element={<Profile />} />
+        <Route path="/admin/login" element={<AdminLogin />} />
+        <Route path="/admin" element={<Admin />} />
+      </Routes>
     </BrowserRouter>
   );
 }

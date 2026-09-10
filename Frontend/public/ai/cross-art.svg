@@ -1,0 +1,141 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 880" role="img" aria-label="AI generated artwork — a glowing medical shield with a cross, orbiting capsules and heartbeat line">
+  <defs>
+    <linearGradient id="sbg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#e7f7f0"/>
+      <stop offset="0.55" stop-color="#e9f4ff"/>
+      <stop offset="1" stop-color="#efe9ff"/>
+    </linearGradient>
+    <radialGradient id="smeshT" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#22c79a" stop-opacity="0.55"/>
+      <stop offset="1" stop-color="#22c79a" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="smeshV" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#8b6df6" stop-opacity="0.45"/>
+      <stop offset="1" stop-color="#8b6df6" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="shield" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#ffffff" stop-opacity="0.65"/>
+      <stop offset="0.5" stop-color="#f2fbf7" stop-opacity="0.28"/>
+      <stop offset="1" stop-color="#d9f3ea" stop-opacity="0.12"/>
+    </linearGradient>
+    <linearGradient id="shieldRim" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#12a97c"/>
+      <stop offset="1" stop-color="#8b6df6"/>
+    </linearGradient>
+    <linearGradient id="scross" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0fa67f"/>
+      <stop offset="1" stop-color="#5d5bd6"/>
+    </linearGradient>
+    <linearGradient id="orbitA" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#0b7e60"/>
+      <stop offset="0.55" stop-color="#12a97c"/>
+      <stop offset="0.63" stop-color="#ffffff"/>
+      <stop offset="0.72" stop-color="#2dd4c5"/>
+      <stop offset="1" stop-color="#8ee9da"/>
+    </linearGradient>
+    <linearGradient id="orbitB" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#ee5a6e"/>
+      <stop offset="0.55" stop-color="#f26baa"/>
+      <stop offset="0.63" stop-color="#ffffff"/>
+      <stop offset="0.72" stop-color="#f6a34d"/>
+      <stop offset="1" stop-color="#f9bd6e"/>
+    </linearGradient>
+    <linearGradient id="secg" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#12a97c"/>
+      <stop offset="0.5" stop-color="#2dd4c5"/>
+      <stop offset="1" stop-color="#8b6df6"/>
+    </linearGradient>
+    <radialGradient id="sbokeh" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#ffffff" stop-opacity="0.85"/>
+      <stop offset="0.55" stop-color="#c9efe2" stop-opacity="0.5"/>
+      <stop offset="1" stop-color="#c9efe2" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="sblur" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur stdDeviation="20"/>
+    </filter>
+    <filter id="sglow" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur stdDeviation="6"/>
+    </filter>
+  </defs>
+
+  <rect width="760" height="880" fill="url(#sbg)"/>
+  <ellipse cx="180" cy="200" rx="300" ry="230" fill="url(#smeshT)" filter="url(#sblur)"/>
+  <ellipse cx="590" cy="640" rx="300" ry="260" fill="url(#smeshV)" filter="url(#sblur)"/>
+  <g>
+    <circle cx="90" cy="120" r="28" fill="url(#sbokeh)"/>
+    <circle cx="672" cy="150" r="34" fill="url(#sbokeh)"/>
+    <circle cx="150" cy="760" r="26" fill="url(#sbokeh)"/>
+    <circle cx="620" cy="800" r="30" fill="url(#sbokeh)"/>
+    <circle cx="380" cy="70" r="14" fill="url(#sbokeh)"/>
+  </g>
+
+  <!-- orbit rings -->
+  <g fill="none">
+    <circle cx="360" cy="360" r="196" stroke="#12a97c" stroke-opacity="0.35" stroke-width="3" stroke-dasharray="3 12"/>
+    <circle cx="360" cy="360" r="252" stroke="#8b6df6" stroke-opacity="0.3" stroke-width="3" stroke-dasharray="3 14"/>
+  </g>
+
+  <!-- shield -->
+  <g>
+    <path d="M360 158 C 440 188 500 188 546 188 L 546 392 C 546 512 462 586 360 632 C 258 586 174 512 174 392 L 174 188 C 220 188 280 188 360 158 Z"
+      fill="url(#shield)" stroke="url(#shieldRim)" stroke-width="7"/>
+  </g>
+
+  <!-- glowing cross inside shield -->
+  <g opacity="0.5" filter="url(#sglow)">
+    <rect x="330" y="284" width="60" height="220" rx="26" fill="url(#scross)"/>
+    <rect x="252" y="342" width="208" height="60" rx="26" fill="url(#scross)"/>
+  </g>
+  <g>
+    <rect x="330" y="284" width="60" height="220" rx="26" fill="url(#scross)"/>
+    <rect x="252" y="342" width="208" height="60" rx="26" fill="url(#scross)"/>
+    <rect x="344" y="310" width="12" height="56" rx="6" fill="#ffffff" fill-opacity="0.5"/>
+    <rect x="278" y="356" width="60" height="12" rx="6" fill="#ffffff" fill-opacity="0.5"/>
+  </g>
+
+  <!-- orbiting capsules -->
+  <g transform="translate(540,230) rotate(28)">
+    <rect x="-72" y="-30" width="144" height="60" rx="30" fill="url(#orbitA)"/>
+    <rect x="-58" y="-19" width="116" height="9" rx="4" fill="#ffffff" fill-opacity="0.75"/>
+  </g>
+  <g transform="translate(166,506) rotate(-24)">
+    <rect x="-66" y="-28" width="132" height="56" rx="28" fill="url(#orbitB)"/>
+    <rect x="-53" y="-18" width="106" height="8" rx="4" fill="#ffffff" fill-opacity="0.75"/>
+  </g>
+  <g transform="translate(556,520) rotate(14)">
+    <rect x="-58" y="-25" width="116" height="50" rx="25" fill="url(#orbitA)"/>
+    <rect x="-47" y="-16" width="94" height="8" rx="4" fill="#ffffff" fill-opacity="0.75"/>
+  </g>
+
+  <!-- floating badges -->
+  <g transform="translate(150,180)">
+    <circle cx="0" cy="0" r="44" fill="#ffffff" fill-opacity="0.8" stroke="#12a97c" stroke-opacity="0.5" stroke-width="2.5"/>
+    <g transform="translate(-17,-12) scale(1.4)">
+      <path d="M12 21 C 7 16.5 2 12.5 2 8 C 2 4.8 4.5 2.6 7.3 2.6 C 9.4 2.6 11.3 3.9 12 6 C 12.7 3.9 14.6 2.6 16.7 2.6 C 19.5 2.6 22 4.8 22 8 C 22 12.5 17 16.5 12 21 Z" fill="url(#orbitB)"/>
+    </g>
+  </g>
+  <g transform="translate(616,330)">
+    <rect x="-52" y="-36" width="105" height="72" rx="22" fill="#ffffff" fill-opacity="0.8" stroke="#8b6df6" stroke-opacity="0.5" stroke-width="2.5"/>
+    <g transform="translate(0,8)">
+      <circle cx="0" cy="0" r="14" fill="none" stroke="url(#shieldRim)" stroke-width="4.5"/>
+      <path d="M-7 -1 L-2 6 L7 -5" fill="none" stroke="#0fa67f" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+    </g>
+  </g>
+
+  <!-- ECG band -->
+  <g>
+    <rect x="60" y="676" width="640" height="140" rx="34" fill="#ffffff" fill-opacity="0.42" stroke="#ffffff" stroke-opacity="0.9" stroke-width="2"/>
+    <path class="ecg-anim" d="M96 748
+      L112 748 L120 738 L130 748 L146 748 L156 734 L168 748 L180 748 L190 700 L202 748
+      L214 736 L228 748 L244 748 L256 728 L268 748 L282 748 L292 740 L306 748 L320 748
+      L332 706 L344 748 L356 748 L368 740 L382 748 L396 748 L408 732 L420 748 L434 748
+      L446 744 L460 748 L474 748 L486 714 L498 748 L512 748 L524 742 L538 748 L552 748
+      L564 736 L576 748 L590 748 L602 744 L616 748 L630 748 L644 740 L656 748 L668 748"
+      fill="none" stroke="url(#secg)" stroke-width="5" stroke-linecap="round"/>
+  </g>
+  <g stroke-linecap="round" stroke-width="4">
+    <path d="M96 92 L96 118 M83 105 L109 105" stroke="#12a97c"/>
+    <path d="M662 600 L662 626 M649 613 L675 613" stroke="#f6a34d"/>
+    <path d="M110 596 L110 620 M98 608 L122 608" stroke="#f26baa"/>
+  </g>
+</svg>

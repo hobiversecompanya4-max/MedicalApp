@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import api from "../services/api";
 import { getToken } from "../services/auth";
 
@@ -129,11 +129,22 @@ const OrderMedicine = () => {
   };
 
   return (
-    <section id="order" className="bg-[#F8FAFC] py-16 md:py-20 animate-rise">
-      <div className="max-w-[1000px] mx-auto px-4 sm:px-6">
+    <section id="order" className="min-h-screen bg-gradient-to-br from-[#f3fbf8] via-white to-[#e8f6f1] px-4 py-6 animate-rise sm:py-10">
+      <div className="mx-auto grid w-full max-w-6xl overflow-hidden rounded-[2rem] border border-white/80 bg-white shadow-2xl shadow-gray-200/60 md:grid-cols-[0.9fr_1.1fr]">
+        <div className="relative hidden min-h-[900px] overflow-hidden md:flex md:items-start p-10">
+          <img src="/hero.png" alt="Panchawati Medical care" className="absolute inset-0 h-full w-full object-cover" />
+          <div aria-hidden="true" className="absolute inset-0 bg-gradient-to-b from-[#06211d]/80 via-[#0b5f59]/45 to-[#06211d]/55" />
+          <div className="relative z-10 pt-2 text-white">
+            <p className="text-xs font-bold uppercase tracking-[0.18em] text-emerald-200 drop-shadow-[0_1px_2px_rgba(0,0,0,0.8)]">Panchawati Medical</p>
+            <h2 className="mt-3 text-3xl font-bold leading-tight drop-shadow-[0_2px_3px_rgba(0,0,0,0.85)]">Your medicines, prepared with care.</h2>
+            <p className="mt-3 max-w-sm text-sm leading-6 text-white drop-shadow-[0_1px_3px_rgba(0,0,0,0.85)]">Upload your prescription and let our pharmacist team help make your order simple, safe, and convenient.</p>
+          </div>
+        </div>
+
+        <div className="w-full p-1 sm:p-3">
 
         {/* Section Heading */}
-        <div className="text-center mb-10">
+        <div className="mb-10 px-5 pt-5 text-center sm:px-6 sm:pt-6">
           <span className="inline-flex items-center rounded-full bg-brand-soft px-4 py-2 text-xs font-semibold text-brand">
             ORDER MEDICINE
           </span>
@@ -149,7 +160,7 @@ const OrderMedicine = () => {
         </div>
 
         {/* Form Card */}
-        <div className="animate-rise animate-lift bg-white border border-[#E2E8F0] rounded-2xl shadow-sm p-6 md:p-8">
+        <div className="animate-rise animate-lift rounded-3xl border border-[#E2E8F0] bg-white p-6 shadow-xl shadow-gray-200/40 md:p-8">
 
           <form onSubmit={handleSubmit} className="space-y-7">
 
@@ -437,6 +448,7 @@ const OrderMedicine = () => {
             </p>
 
           </form>
+        </div>
         </div>
       </div>
     </section>

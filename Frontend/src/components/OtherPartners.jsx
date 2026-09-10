@@ -60,7 +60,21 @@ const strengths = [
 
 const OtherPartners = () => {
   return (
-    <section className="bg-[linear-gradient(180deg,rgba(251,254,254,0.88),rgba(244,249,255,0.9))] px-5 py-16 sm:px-6 sm:py-20 animate-rise backdrop-blur-sm">
+    <section className="relative bg-[linear-gradient(180deg,rgba(251,254,254,0.88),rgba(244,249,255,0.9))] px-5 py-16 sm:px-6 sm:py-20 animate-rise backdrop-blur-sm overflow-hidden">
+      {/* AI-generated celebration balloons artwork */}
+      <div
+        aria-hidden="true"
+        className="pointer-events-none absolute -right-10 top-0 h-[260px] w-[260px] sm:-right-14 sm:h-[340px] sm:w-[340px] lg:-right-20 lg:h-[420px] lg:w-[420px] opacity-70"
+        style={{ animation: "blob-drift 18s ease-in-out infinite alternate" }}
+      >
+        <img
+          src="/ai/partners-art.svg"
+          alt=""
+          className="h-full w-full object-cover"
+          loading="lazy"
+        />
+      </div>
+
       <div className="mx-auto max-w-[1120px]">
         <div className="animate-rise mb-5 flex items-center gap-3">
           <span className="text-[10px] font-bold uppercase tracking-[0.16em] text-brand-strong">

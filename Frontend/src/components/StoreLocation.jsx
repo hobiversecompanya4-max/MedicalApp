@@ -6,8 +6,22 @@ const StoreLocation = () => {
   return (
     <section
       id="location"
-      className="bg-[linear-gradient(180deg,rgba(247,251,250,0.82),rgba(238,246,244,0.78))] px-5 py-14 sm:px-6 sm:py-16 animate-rise backdrop-blur-sm"
+      className="relative bg-[linear-gradient(180deg,rgba(247,251,250,0.82),rgba(238,246,244,0.78))] px-5 py-14 sm:px-6 sm:py-16 animate-rise backdrop-blur-sm overflow-hidden"
     >
+      {/* AI-generated stylised map artwork */}
+      <div
+        aria-hidden="true"
+        className="pointer-events-none absolute -right-12 top-0 h-[320px] w-[320px] sm:-right-16 sm:h-[420px] sm:w-[420px] lg:-right-20 lg:h-[520px] lg:w-[520px] opacity-60"
+        style={{ animation: "blob-drift 15s ease-in-out infinite alternate" }}
+      >
+        <img
+          src="/ai/map-art.svg"
+          alt="Stylised map showing delivery route to Panchawati Medical Store"
+          className="h-full w-full object-cover"
+          loading="lazy"
+        />
+      </div>
+
       <div className="mx-auto max-w-[1200px]">
         <div className="grid items-center gap-8 md:grid-cols-2 md:gap-12">
 
@@ -78,15 +92,14 @@ const StoreLocation = () => {
           <div className="animate-rise-delay animate-lift overflow-hidden rounded-[28px] border border-[#dbe7e4] bg-white/90 p-2 shadow-[0_18px_45px_rgba(15,23,42,0.08)] backdrop-blur-sm">
             <div className="relative flex min-h-[320px] items-center justify-center overflow-hidden rounded-[22px] bg-[linear-gradient(180deg,rgba(233,242,239,0.98),rgba(238,246,255,0.92),rgba(255,246,232,0.9))]">
 
-              {/* Decorative map background */}
-              <div className="absolute inset-0 opacity-60">
-                <div className="absolute left-[10%] top-[18%] h-24 w-24 rounded-full border-[18px] border-white/70" />
-                <div className="absolute right-[8%] top-[35%] h-32 w-32 rounded-full border-[22px] border-white/60" />
-                <div className="absolute bottom-[12%] left-[28%] h-20 w-36 rotate-12 rounded-full border-[16px] border-white/60" />
-
-                <div className="absolute left-0 top-[48%] h-[3px] w-full rotate-6 bg-white/80" />
-                <div className="absolute left-[18%] top-0 h-full w-[3px] rotate-[20deg] bg-white/70" />
-              </div>
+              {/* Store map background */}
+              <img
+                src="/hero.png"
+                alt="Map view near Panchawati Medical Store"
+                className="absolute inset-0 h-full w-full object-cover"
+                loading="lazy"
+              />
+              <div aria-hidden="true" className="absolute inset-0 bg-white/25" />
 
               {/* Location pin */}
               <div className="relative z-10 flex flex-col items-center">

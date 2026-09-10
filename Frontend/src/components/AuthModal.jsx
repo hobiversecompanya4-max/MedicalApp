@@ -64,13 +64,14 @@ const AuthModal = ({ mode = 'login', onClose }) => {
           <X size={19} />
         </button>
 
-        <div className="mb-7 pr-10 sm:row-span-3 sm:mb-0 sm:bg-[linear-gradient(145deg,#e6fffb_0%,#eff6ff_100%)] sm:p-10 sm:pr-16">
-          <div className="mb-4 inline-flex h-12 w-12 items-center justify-center rounded-2xl bg-brand-soft text-brand-strong">
-            {isRegister ? <UserRound size={23} /> : <LockKeyhole size={22} />}
+        <div className="relative mb-7 flex min-h-[300px] items-start overflow-hidden rounded-[1.5rem] p-5 sm:row-span-3 sm:mb-0 sm:min-h-[560px] sm:rounded-none sm:p-10">
+          <img src="/hero.png" alt="Panchawati Medical care" className="absolute inset-0 h-full w-full object-cover" />
+          <div aria-hidden="true" className="absolute inset-0 bg-gradient-to-b from-[#06211d]/80 via-[#0b5f59]/45 to-[#06211d]/55" />
+          <div className="relative z-10 pt-5 text-white sm:pt-2">
+            <p className="text-xs font-bold uppercase tracking-[0.18em] text-emerald-200 drop-shadow-[0_1px_2px_rgba(0,0,0,0.8)]">Panchawati Medical</p>
+            <h2 id="auth-modal-title" className="mt-3 text-2xl font-bold text-white drop-shadow-[0_2px_3px_rgba(0,0,0,0.85)] sm:text-3xl">{isRegister ? 'Create your account' : 'Welcome back'}</h2>
+            <p className="mt-2 max-w-sm text-sm leading-6 text-white drop-shadow-[0_1px_3px_rgba(0,0,0,0.85)]">{isRegister ? 'Join us for simpler medicine ordering and prescription support.' : 'Sign in to manage orders, prescriptions, and delivery updates.'}</p>
           </div>
-          <p className="text-xs font-bold uppercase tracking-[0.18em] text-brand">Panchawati Medical</p>
-          <h2 id="auth-modal-title" className="mt-2 text-2xl font-bold text-slate-900 sm:text-3xl">{isRegister ? 'Create your account' : 'Welcome back'}</h2>
-          <p className="mt-2 text-sm leading-6 text-slate-500">{isRegister ? 'Join us for simpler medicine ordering and prescription support.' : 'Sign in to manage orders, prescriptions, and delivery updates.'}</p>
         </div>
 
         <form onSubmit={handleSubmit} className="space-y-4 sm:p-10 sm:pb-0">

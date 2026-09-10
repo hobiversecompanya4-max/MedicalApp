@@ -1,4 +1,4 @@
-import { ArrowRight, Quote, Star } from 'lucide-react'
+import { ArrowRight, HeartHandshake, Quote, Star } from 'lucide-react'
 
 const experiences = [
   { name: 'Ayush Sharma', location: 'Local customer', message: 'The staff were polite, patient, and explained every step instead of rushing me through the order.' },
@@ -13,9 +13,10 @@ const experiences = [
   { name: 'Ritu Malhotra', location: 'Local customer', message: 'Professional staff, transparent recommendations, and genuine discounts make Panchawati feel different.' },
 ]
 
-const ExperienceCard = ({ experience, duplicate = false }) => (
-  <article className="customer-experience-card w-[290px] shrink-0 rounded-3xl border border-[#dbe7e4] bg-white p-5 shadow-[0_10px_28px_rgba(15,23,42,0.06)] sm:w-[330px]" aria-hidden={duplicate}>
-    <div className="flex items-center justify-between">
+const ExperienceCard = ({ experience, index, duplicate = false }) => (
+  <article className="customer-experience-card relative w-[280px] shrink-0 overflow-hidden rounded-[1.5rem] border border-[#dbe7e4] bg-white p-5 shadow-[0_8px_22px_rgba(15,23,42,0.05)] sm:w-[330px]" aria-hidden={duplicate}>
+    <div className={`absolute inset-x-0 top-0 h-1 ${index % 3 === 0 ? 'bg-brand' : index % 3 === 1 ? 'bg-sky' : 'bg-amber'}`} />
+    <div className="flex items-center justify-between pt-1">
       <div className="flex gap-0.5 text-amber" aria-label="5 out of 5 stars">
         {[1, 2, 3, 4, 5].map((star) => <Star key={star} size={14} fill="currentColor" />)}
       </div>
@@ -27,7 +28,7 @@ const ExperienceCard = ({ experience, duplicate = false }) => (
         <h3 className="text-sm font-bold text-[#0F172A]">{experience.name}</h3>
         <p className="mt-1 text-xs text-slate-500">{experience.location}</p>
       </div>
-      <span className="inline-flex h-8 w-8 items-center justify-center rounded-full bg-brand-soft text-xs font-bold text-brand-strong">
+      <span className={`inline-flex h-9 w-9 items-center justify-center rounded-full text-xs font-bold ${index % 3 === 0 ? 'bg-brand-soft text-brand-strong' : index % 3 === 1 ? 'bg-sky-soft text-sky' : 'bg-amber-soft text-amber'}`}>
         {experience.name.split(' ').map((part) => part[0]).join('')}
       </span>
     </div>
@@ -38,25 +39,28 @@ const CustomerExperiences = () => {
   return (
     <section id="customer-experiences" className="overflow-hidden bg-[linear-gradient(180deg,rgba(244,238,255,0.7),rgba(247,251,250,0.8))] py-14 sm:py-16">
       <div className="mx-auto max-w-[1200px] px-5 sm:px-8">
-        <div className="mx-auto max-w-2xl text-center">
-          <p className="mb-2 inline-flex items-center gap-2 rounded-full border border-brand/15 bg-brand-soft px-4 py-2 text-[10px] font-bold uppercase tracking-[0.16em] text-brand-strong">
-            <Quote size={14} />
-            Customer experiences
-          </p>
-          <h2 className="font-[Plus_Jakarta_Sans] text-[clamp(28px,3vw,40px)] font-semibold leading-tight tracking-[-0.8px] text-[#0F172A]">Trusted by families, chosen every day</h2>
-          <p className="mt-3 text-sm leading-6 text-[var(--text)] sm:text-[15px]">Real care is in the details. Here is what customers say about ordering with Panchawati Medical.</p>
+        <div className="flex flex-col gap-5 sm:flex-row sm:items-end sm:justify-between">
+          <div className="max-w-2xl">
+            <p className="mb-2 inline-flex items-center gap-2 rounded-full border border-brand/15 bg-brand-soft px-4 py-2 text-[10px] font-bold uppercase tracking-[0.16em] text-brand-strong">
+              <HeartHandshake size={14} />
+              Customer experiences
+            </p>
+            <h2 className="font-[Plus_Jakarta_Sans] text-[clamp(28px,3vw,40px)] font-semibold leading-tight tracking-[-0.8px] text-[#0F172A]">Care people come back for</h2>
+            <p className="mt-3 text-sm leading-6 text-[var(--text)] sm:text-[15px]">Kind staff, smarter recommendations, and savings that make every refill feel easier.</p>
+          </div>
+          <div className="flex items-center gap-2 text-xs font-semibold text-slate-500 sm:pb-1"><span className="flex h-8 w-8 items-center justify-center rounded-full bg-white text-brand shadow-sm"><Quote size={15} /></span>10 local voices</div>
         </div>
       </div>
 
       <div className="customer-experience-mask mt-10" aria-label="Customer experiences">
         <div className="customer-experience-track flex w-max gap-4 px-4">
-          {experiences.map((experience) => <ExperienceCard key={experience.name} experience={experience} />)}
-          {experiences.map((experience) => <ExperienceCard key={`${experience.name}-duplicate`} experience={experience} duplicate />)}
+          {experiences.map((experience, index) => <ExperienceCard key={experience.name} experience={experience} index={index} />)}
+          {experiences.map((experience, index) => <ExperienceCard key={`${experience.name}-duplicate`} experience={experience} index={index} duplicate />)}
         </div>
       </div>
 
       <div className="mx-auto mt-7 flex max-w-[1200px] items-center justify-center gap-2 px-5 text-xs font-semibold text-slate-500 sm:px-8">
-        <ArrowRight size={15} className="text-brand" /> Move over the experiences to pause the story
+        <ArrowRight size={15} className="text-brand" /> Hover to pause and read a story
       </div>
     </section>
   )

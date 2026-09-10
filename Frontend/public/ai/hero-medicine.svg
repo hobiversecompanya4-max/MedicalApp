@@ -1,0 +1,204 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 1000" role="img" aria-label="AI generated medical artwork — glass medicine bottle, floating capsules and a glowing medical cross">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#eef9f4"/>
+      <stop offset="0.55" stop-color="#e8f7f0"/>
+      <stop offset="1" stop-color="#eaf4ff"/>
+    </linearGradient>
+    <radialGradient id="meshTeal" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#22c79a" stop-opacity="0.55"/>
+      <stop offset="1" stop-color="#22c79a" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="meshViolet" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#8b6df6" stop-opacity="0.42"/>
+      <stop offset="1" stop-color="#8b6df6" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="meshWarm" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#f6a34d" stop-opacity="0.4"/>
+      <stop offset="1" stop-color="#f6a34d" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="glassPanel" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#ffffff" stop-opacity="0.5"/>
+      <stop offset="0.6" stop-color="#ffffff" stop-opacity="0.12"/>
+      <stop offset="1" stop-color="#d9f3ea" stop-opacity="0.08"/>
+    </linearGradient>
+    <linearGradient id="bottleBody" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#9fe8d6" stop-opacity="0.85"/>
+      <stop offset="0.5" stop-color="#d7f6ee" stop-opacity="0.45"/>
+      <stop offset="1" stop-color="#bfe9dd" stop-opacity="0.7"/>
+    </linearGradient>
+    <linearGradient id="capGrad" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#0b7e60"/>
+      <stop offset="0.5" stop-color="#12a97c"/>
+      <stop offset="1" stop-color="#2dd4c5"/>
+    </linearGradient>
+    <linearGradient id="capsuleBody" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#5d5bd6"/>
+      <stop offset="0.55" stop-color="#7a6bf5"/>
+      <stop offset="0.62" stop-color="#e9f7ff"/>
+      <stop offset="0.68" stop-color="#19b08a"/>
+      <stop offset="1" stop-color="#2dd4c5"/>
+    </linearGradient>
+    <linearGradient id="capsule2" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#f6a34d"/>
+      <stop offset="0.5" stop-color="#f8c578"/>
+      <stop offset="0.56" stop-color="#ffffff"/>
+      <stop offset="0.64" stop-color="#ee5a6e"/>
+      <stop offset="1" stop-color="#f26baa"/>
+    </linearGradient>
+    <linearGradient id="crossGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#12a97c"/>
+      <stop offset="1" stop-color="#8b6df6"/>
+    </linearGradient>
+    <linearGradient id="ecgGrad" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#12a97c"/>
+      <stop offset="0.5" stop-color="#2dd4c5"/>
+      <stop offset="1" stop-color="#8b6df6"/>
+    </linearGradient>
+    <linearGradient id="heartGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#f26baa"/>
+      <stop offset="1" stop-color="#ee5a6e"/>
+    </linearGradient>
+    <linearGradient id="labelGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#ffffff"/>
+      <stop offset="1" stop-color="#e7f6ef"/>
+    </linearGradient>
+    <radialGradient id="bokeh" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#ffffff" stop-opacity="0.85"/>
+      <stop offset="0.55" stop-color="#bff0e0" stop-opacity="0.5"/>
+      <stop offset="1" stop-color="#bff0e0" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="blurSoft" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur stdDeviation="22"/>
+    </filter>
+    <filter id="blurGlow" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur stdDeviation="7"/>
+    </filter>
+    <filter id="blurBokeh" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur stdDeviation="5"/>
+    </filter>
+  </defs>
+
+  <!-- background -->
+  <rect width="900" height="1000" fill="url(#bg)"/>
+  <ellipse cx="210" cy="185" rx="330" ry="260" fill="url(#meshTeal)" filter="url(#blurSoft)" opacity="0.8"/>
+  <ellipse cx="700" cy="290" rx="300" ry="240" fill="url(#meshViolet)" filter="url(#blurSoft)" opacity="0.7"/>
+  <ellipse cx="240" cy="860" rx="330" ry="240" fill="url(#meshWarm)" filter="url(#blurSoft)" opacity="0.55"/>
+  <ellipse cx="760" cy="900" rx="280" ry="240" fill="url(#meshTeal)" filter="url(#blurSoft)" opacity="0.5"/>
+
+  <!-- bokeh -->
+  <g filter="url(#blurBokeh)">
+    <circle cx="150" cy="120" r="34" fill="url(#bokeh)"/>
+    <circle cx="82" cy="230" r="20" fill="url(#bokeh)"/>
+    <circle cx="700" cy="110" r="46" fill="url(#bokeh)"/>
+    <circle cx="806" cy="200" r="22" fill="url(#bokeh)"/>
+    <circle cx="630" cy="60" r="16" fill="url(#bokeh)"/>
+    <circle cx="240" cy="920" r="30" fill="url(#bokeh)"/>
+    <circle cx="520" cy="948" r="18" fill="url(#bokeh)"/>
+    <circle cx="740" cy="950" r="26" fill="url(#bokeh)"/>
+  </g>
+
+  <!-- glass panel -->
+  <rect x="150" y="140" width="600" height="720" rx="56" fill="url(#glassPanel)" stroke="#ffffff" stroke-opacity="0.85" stroke-width="2.5"/>
+  <rect x="168" y="162" width="564" height="130" rx="40" fill="#ffffff" fill-opacity="0.32"/>
+
+  <!-- floating capsule top right -->
+  <g transform="translate(640,306) rotate(-20)">
+    <rect x="-128" y="-48" width="256" height="96" rx="48" fill="url(#capsuleBody)"/>
+    <rect x="-112" y="-30" width="224" height="14" rx="7" fill="#ffffff" fill-opacity="0.7"/>
+    <ellipse cx="-80" cy="-26" rx="30" ry="9" fill="#ffffff" fill-opacity="0.85"/>
+    <ellipse cx="66" cy="-26" rx="26" ry="8" fill="#ffffff" fill-opacity="0.6"/>
+  </g>
+
+  <!-- glow cross behind bottle -->
+  <g opacity="0.4" filter="url(#blurGlow)">
+    <rect x="524" y="498" width="92" height="236" rx="40" fill="url(#crossGrad)"/>
+    <rect x="438" y="556" width="252" height="92" rx="40" fill="url(#crossGrad)"/>
+  </g>
+
+  <!-- big glass bottle -->
+  <g>
+    <rect x="302" y="248" width="58" height="84" rx="16" fill="url(#capGrad)"/>
+    <rect x="312" y="258" width="38" height="14" rx="6" fill="#ffffff" fill-opacity="0.8"/>
+    <rect x="316" y="268" width="8" height="20" rx="3" fill="#0b7e60" fill-opacity="0.5"/>
+    <rect x="306" y="334" width="50" height="78" rx="12" fill="url(#bottleBody)" stroke="#ffffff" stroke-opacity="0.8" stroke-width="1.5"/>
+    <rect x="250" y="414" width="160" height="282" rx="46" fill="url(#bottleBody)" stroke="#ffffff" stroke-opacity="0.85" stroke-width="2"/>
+    <path d="M276 446 C 286 470 286 500 282 524 282 554 288 584 292 620 296 648 300 668" fill="none" stroke="#ffffff" stroke-opacity="0.7" stroke-width="16" stroke-linecap="round"/>
+    <!-- pills inside -->
+    <g>
+      <circle cx="310" cy="500" r="17" fill="#12a97c" stroke="#2dd4c5" stroke-width="2"/>
+      <circle cx="352" cy="520" r="15" fill="#ffffff"/>
+      <circle cx="330" cy="550" r="15" fill="#f6a34d"/>
+      <circle cx="368" cy="570" r="13" fill="#ee5a6e"/>
+      <circle cx="296" cy="582" r="12" fill="#7a6bf5"/>
+      <rect x="342" y="596" width="34" height="18" rx="9" fill="#2dd4c5" stroke="#64e6d0" stroke-width="1.5"/>
+      <circle cx="316" cy="620" r="13" fill="#f26baa" stroke="#ffffff" stroke-width="2"/>
+      <rect x="286" y="646" width="30" height="17" rx="8" fill="#f6a34d"/>
+      <circle cx="352" cy="648" r="12" fill="#12a97c"/>
+      <rect x="302" y="586" width="20" height="10" rx="5" fill="#ffffff" fill-opacity="0.9"/>
+    </g>
+    <!-- label -->
+    <rect x="266" y="492" width="128" height="112" rx="14" fill="url(#labelGrad)" stroke="#ffffff" stroke-width="1.5"/>
+    <rect x="306" y="534" width="48" height="48" rx="12" fill="url(#crossGrad)"/>
+    <rect x="316" y="544" width="28" height="28" rx="7" fill="#ffffff" fill-opacity="0.35"/>
+    <rect x="294" y="590" width="72" height="6" rx="3" fill="#8bb9a8"/>
+    <rect x="286" y="530" width="16" height="4" rx="2" fill="#0b3b34"/>
+    <rect x="358" y="530" width="16" height="4" rx="2" fill="#0b3b34"/>
+  </g>
+
+  <!-- medical cross -->
+  <g>
+    <rect x="528" y="502" width="84" height="228" rx="34" fill="url(#crossGrad)"/>
+    <rect x="444" y="560" width="252" height="84" rx="34" fill="url(#crossGrad)"/>
+    <rect x="570" y="544" width="16" height="72" rx="8" fill="#ffffff" fill-opacity="0.5"/>
+    <rect x="488" y="586" width="76" height="14" rx="7" fill="#ffffff" fill-opacity="0.5"/>
+    <circle cx="568" cy="610" r="10" fill="#ffffff" fill-opacity="0.85"/>
+  </g>
+
+  <!-- capsule two-tone bottom-left -->
+  <g transform="translate(208,806) rotate(24)">
+    <rect x="-62" y="-26" width="124" height="52" rx="26" fill="url(#capsule2)"/>
+    <rect x="-50" y="-16" width="100" height="8" rx="4" fill="#ffffff" fill-opacity="0.75"/>
+  </g>
+
+  <!-- open pill -->
+  <g transform="translate(716,470)">
+    <path d="M -26 14 A 30 30 0 0 1 26 14 A 30 30 0 0 1 -26 14 Z" fill="#f26baa" stroke="#ffffff" stroke-width="2"/>
+    <ellipse cx="-26" cy="16" rx="4" ry="22" fill="#ffffff" fill-opacity="0.55"/>
+    <circle cx="26" cy="10" r="14" fill="#ffd9b3" stroke="#f6a34d" stroke-width="2"/>
+  </g>
+
+  <!-- heart -->
+  <g transform="translate(686,806)">
+    <ellipse cx="-11" cy="-8" rx="17" ry="19" fill="url(#heartGrad)"/>
+    <ellipse cx="10" cy="-8" rx="17" ry="19" fill="url(#heartGrad)"/>
+    <path d="M-13,-2 L13,-2 L0,30 Z" fill="url(#heartGrad)"/>
+    <ellipse cx="-6" cy="-14" rx="6" ry="8" fill="#ffffff" fill-opacity="0.7"/>
+    <circle cx="0" cy="0" r="70" fill="none" stroke="#f26baa" stroke-opacity="0.35" stroke-width="1.5"/>
+  </g>
+
+  <!-- ECG heartbeat line -->
+  <path class="ecg-anim" d="M180 806
+    L200 806 L214 806 L224 790 L238 806 L254 806 L264 796 L278 806 L292 806 L304 784 L318 806
+    L334 806 L344 736 L354 806 L368 786 L380 806 L394 806 L408 780 L422 806 L438 806
+    L450 792 L462 806 L476 806 L488 758 L502 806 L518 806 L530 800 L544 806 L558 806
+    L570 772 L582 806 L596 806 L608 788 L620 806 L634 806 L646 748 L658 806 L672 806
+    L684 794 L696 806 L710 806 L726 796 L738 806 L750 806"
+    fill="none" stroke="url(#ecgGrad)" stroke-width="5.5" stroke-linecap="round"/>
+  <path d="M150 806 C 190 800 210 800 238 806" fill="none" stroke="#ffffff" stroke-opacity="0.5" stroke-width="2"/>
+
+  <!-- sparkles -->
+  <g fill="#ffffff">
+    <path d="M300 176 L300 214 M278 195 L322 195" stroke="#12a97c" stroke-width="4" stroke-linecap="round"/>
+    <path d="M560 160 L560 190 M543 175 L577 175" stroke="#2dd4c5" stroke-width="4" stroke-linecap="round"/>
+    <path d="M766 258 L766 290 M749 274 L783 274" stroke="#8b6df6" stroke-width="4" stroke-linecap="round"/>
+    <path d="M178 604 L178 634 M161 619 L195 619" stroke="#f6a34d" stroke-width="4" stroke-linecap="round"/>
+    <path d="M760 700 L760 728 M743 714 L777 714" stroke="#f26baa" stroke-width="4" stroke-linecap="round"/>
+  </g>
+  <g fill="#12a97c" opacity="0.85">
+    <circle cx="458" cy="236" r="4"/>
+    <circle cx="772" cy="426" r="4"/>
+    <circle cx="142" cy="470" r="4"/>
+    <circle cx="608" cy="882" r="4"/>
+  </g>
+</svg>

@@ -40,7 +40,11 @@
 }
 
 .customer-experience-track {
+  backface-visibility: hidden;
+  contain: layout paint;
   animation: customer-experience-scroll 58s linear infinite;
+  transform: translate3d(0, 0, 0);
+  will-change: transform;
 }
 
 .customer-experience-track:hover {
@@ -82,11 +86,22 @@
 
 @keyframes customer-experience-scroll {
   from {
-    transform: translateX(0);
+    transform: translate3d(0, 0, 0);
   }
 
   to {
-    transform: translateX(calc(-50% - 0.5rem));
+    transform: translate3d(calc(-50% - 0.5rem), 0, 0);
+  }
+}
+
+@media (max-width: 639px) {
+  .customer-experience-mask {
+    mask-image: none;
+    -webkit-mask-image: none;
+  }
+
+  .customer-experience-track {
+    animation-duration: 90s;
   }
 }
 

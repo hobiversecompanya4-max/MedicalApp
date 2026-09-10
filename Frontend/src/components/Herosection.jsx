@@ -1,7 +1,11 @@
 import React from "react";
 import {
   ArrowRight,
+  BadgePercent,
+  CheckCircle2,
   Clock3,
+  ChevronRight,
+  HeartPulse,
   PackageCheck,
   PhoneCall,
   ShieldCheck,
@@ -17,6 +21,7 @@ const highlights = [
     copy: "Every prescription is reviewed before dispatch.",
     tone: "bg-brand-soft",
     textTone: "text-brand-strong",
+    shadow: "shadow-[0_10px_26px_rgba(18,166,127,0.18)]",
   },
   {
     icon: Truck,
@@ -24,6 +29,7 @@ const highlights = [
     copy: "Available within a 5 km local delivery zone.",
     tone: "bg-sky-soft",
     textTone: "text-sky",
+    shadow: "shadow-[0_10px_26px_rgba(77,166,255,0.18)]",
   },
   {
     icon: Clock3,
@@ -31,6 +37,7 @@ const highlights = [
     copy: "Built for same-day local order handling.",
     tone: "bg-amber-soft",
     textTone: "text-amber",
+    shadow: "shadow-[0_10px_26px_rgba(232,147,12,0.16)]",
   },
   {
     icon: PackageCheck,
@@ -38,42 +45,79 @@ const highlights = [
     copy: "Tamper-evident, carefully packed medicines.",
     tone: "bg-violet-soft",
     textTone: "text-violet",
+    shadow: "shadow-[0_10px_26px_rgba(109,94,240,0.16)]",
+  },
+];
+
+const floatingPills = [
+  { emoji: "💊", className: "left-[4%] top-[16%] text-3xl sm:text-4xl", style: { "--fd": "0s", "--fr": "-8deg" } },
+  { emoji: "🧪", className: "right-[6%] top-[24%] text-3xl sm:text-4xl", style: { "--fd": "1.2s", "--fr": "10deg" } },
+  { emoji: "🩺", className: "left-[10%] bottom-[20%] text-3xl sm:text-4xl", style: { "--fd": "0.6s", "--fr": "6deg" } },
+  { emoji: "💉", className: "right-[12%] bottom-[15%] text-3xl sm:text-4xl", style: { "--fd": "1.8s", "--fr": "-6deg" } },
+];
+
+const careMoments = [
+  {
+    label: "Personal support",
+    title: "A pharmacist who listens",
+    copy: "Get patient, practical guidance from a real pharmacy team whenever you need help.",
+    icon: HeartPulse,
+    status: "Human support included",
+  },
+  {
+    label: "Smarter value",
+    title: "Save without guesswork",
+    copy: "We can point you toward suitable lower-cost options and special savings for regular customers.",
+    icon: BadgePercent,
+    status: "Value-focused guidance",
+  },
+  {
+    label: "Safe packaging",
+    title: "Prepared with care",
+    copy: "Medicines are checked, sealed, and packed thoughtfully before they leave our store.",
+    icon: PackageCheck,
+    status: "Carefully prepared",
   },
 ];
 
 const Herosection = () => {
   const navigate = useNavigate();
+  const [activeCare, setActiveCare] = React.useState(1);
+  const activeMoment = careMoments[activeCare];
+  const ActiveIcon = activeMoment.icon;
 
   return (
-    <section className="relative overflow-hidden bg-[linear-gradient(180deg,rgba(251,254,254,0.92)_0%,rgba(245,251,249,0.82)_58%,rgba(238,244,251,0.88)_100%)] px-5 py-10 sm:px-[5%] sm:py-14 backdrop-blur-sm lg:min-h-[calc(100svh-88px)] lg:py-12">
+    <section className="relative overflow-hidden px-5 pb-12 pt-10 sm:px-[5%] sm:pb-16 sm:pt-14 lg:min-h-[calc(100svh-88px)] lg:py-12">
       <div
         aria-hidden="true"
-        className="pointer-events-none absolute inset-x-0 top-0 h-72 bg-[linear-gradient(135deg,rgba(15,118,110,0.12),rgba(59,130,246,0.07),rgba(255,255,255,0))]"
+        className="blob-drift pointer-events-none absolute -left-24 -top-24 hidden h-72 w-72 rounded-full bg-brand-soft blur-3xl sm:block"
       />
-
       <div
         aria-hidden="true"
-        className="pointer-events-none absolute inset-x-0 bottom-0 h-32 bg-[repeating-linear-gradient(135deg,rgba(15,118,110,0.03)_0_1px,transparent_1px_34px)] opacity-70 animate-sheen"
+        className="blob-drift pointer-events-none absolute -right-20 top-10 hidden h-80 w-80 rounded-full bg-violet-soft blur-3xl sm:block"
+        style={{ animationDelay: "2s" }}
       />
-
+      <div
+        aria-hidden="true"
+        className="glow-pulse pointer-events-none absolute inset-x-0 top-0 hidden h-72 bg-[linear-gradient(135deg,rgba(18,166,127,0.16),rgba(109,94,240,0.1),rgba(255,255,255,0))] sm:block"
+      />
       <div className="relative mx-auto grid max-w-[1540px] grid-cols-1 items-center gap-10 lg:min-h-[calc(100svh-176px)] lg:grid-cols-[1.02fr_.98fr] lg:items-stretch lg:gap-16 xl:gap-20">
         {/* LEFT CONTENT */}
         <div className="relative z-10 lg:flex lg:flex-col lg:justify-center lg:py-6 xl:py-10">
-          <div className="animate-rise animate-lift mb-5 inline-flex items-center gap-2 rounded-full border border-brand/15 bg-[linear-gradient(135deg,rgba(230,255,251,0.92),rgba(232,241,255,0.92),rgba(255,246,232,0.92))] px-4 py-2 text-[11px] font-bold uppercase tracking-[0.16em] text-brand-strong shadow-sm backdrop-blur">
-            <Sparkles size={14} className="text-brand" />
+          <div className="animate-rise animate-lift mb-5 inline-flex items-center gap-2 rounded-full border border-brand/15 bg-white/85 px-4 py-2 text-[11px] font-bold uppercase tracking-[0.16em] text-brand-strong shadow-md backdrop-blur">
+            <Sparkles size={14} className="glow-pulse text-brand" />
             Trusted digital pharmacy
-            <span className="mx-1 text-[#94A3B8]">|</span>
+            <span className="mx-1 text-[#9fbbb3]">|</span>
             <span className="text-[var(--text)]">Free delivery within 5 km</span>
           </div>
 
           <h1
-            className="animate-rise max-w-[12ch] font-[Plus_Jakarta_Sans] text-[clamp(36px,4.3vw,62px)] font-extrabold leading-[1.03] tracking-[-1.8px] text-[#0F172A]"
+            className="animate-rise max-w-[12ch] font-[Plus_Jakarta_Sans] text-[clamp(36px,4.3vw,62px)] font-extrabold leading-[1.03] tracking-[-1.8px] text-[#0B2B26]"
             style={{ animationDelay: "90ms" }}
           >
             Genuine medicines
             <br />
-            delivered with{" "}
-            <span className="text-brand">care</span>
+            delivered with <span className="text-gradient">care</span>
           </h1>
 
           <p
@@ -87,118 +131,123 @@ const Herosection = () => {
 
           <div className="mt-7 grid grid-cols-1 gap-3 sm:grid-cols-2">
             {highlights.map((item, index) => {
-              const Icon = item.icon
-
+              const Icon = item.icon;
               return (
                 <div
                   key={item.title}
-                  className="animate-rise animate-lift rounded-2xl border border-white/80 bg-white/92 p-4 shadow-[0_1px_3px_rgba(15,23,42,0.04)] backdrop-blur"
+                  className="animate-rise tile-glow glass-card rounded-2xl p-4"
                   style={{ animationDelay: `${index * 90 + 220}ms` }}
                 >
-                  <div className={`mb-3 inline-flex h-10 w-10 items-center justify-center rounded-2xl ${item.tone} ${item.textTone}`}>
+                  <div
+                    className={`mb-3 inline-flex h-10 w-10 items-center justify-center rounded-2xl ${item.tone} ${item.textTone} ${item.shadow}`}
+                  >
                     <Icon size={18} />
                   </div>
-
-                  <div className={`mb-3 h-1.5 w-14 rounded-full ${item.tone}`} />
-
-                  <h3 className="text-sm font-bold text-[#0F172A]">
-                    {item.title}
-                  </h3>
-
-                  <p className="mt-1 text-xs leading-5 text-[var(--text)]">
-                    {item.copy}
-                  </p>
+                  <h3 className="text-sm font-bold text-[#0B2B26]">{item.title}</h3>
+                  <p className="mt-1 text-xs leading-5 text-[var(--text)]">{item.copy}</p>
                 </div>
-              )
+              );
             })}
           </div>
-
-          <div
-            className="animate-rise mt-7 flex flex-col gap-3 sm:flex-row"
-            style={{ animationDelay: "560ms" }}
-          >
+          <div className="mt-8 animate-rise flex flex-col gap-3 sm:flex-row sm:items-center sm:gap-4" style={{ animationDelay: "300ms" }}>
             <button
-              type="button"
               onClick={() => navigate("/order")}
-              className="animate-lift inline-flex flex-1 items-center justify-center gap-2 rounded-2xl bg-brand px-6 py-3.5 text-sm font-bold text-white shadow-brand transition hover:bg-brand-strong"
+              className="group relative z-20 inline-flex min-h-[52px] items-center justify-center gap-2 overflow-hidden whitespace-nowrap rounded-full bg-brand-strong px-7 py-3.5 text-sm font-bold text-white shadow-[0_8px_24px_rgba(18,166,127,0.32)] transition-all duration-300 hover:bg-brand hover:shadow-[0_12px_30px_rgba(18,166,127,0.42)] sm:px-8 sm:py-4"
             >
-              Order with prescription
-              <ArrowRight size={17} />
+              <span className="relative z-20 inline-flex items-center text-white">
+                Order now
+                <ArrowRight size={16} className="ml-1.5 transition-transform duration-300 group-hover:translate-x-0.5" />
+              </span>
+              <span className="absolute inset-0 z-0 rounded-full bg-white/20 opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
             </button>
-
             <a
               href="tel:6392323282"
-              className="animate-lift inline-flex flex-1 items-center justify-center gap-2 rounded-2xl border border-slate-200 bg-white px-6 py-3.5 text-sm font-bold text-brand-strong transition hover:border-brand/20 hover:bg-brand-soft"
+              className="inline-flex items-center gap-2 rounded-full border border-[var(--border)] bg-white/70 px-7 py-3.5 text-sm font-semibold text-[var(--text)] shadow-sm backdrop-blur transition-all duration-300 hover:bg-white hover:border-brand/40 hover:shadow-md"
             >
-              <PhoneCall size={17} />
-              Call Pharmacist
+              <PhoneCall size={15} className="text-brand" />
+              Contact us
             </a>
           </div>
 
-          <div
-            className="animate-rise mt-5 flex flex-wrap items-center gap-2 text-[11px] text-[#64748B]"
-            style={{ animationDelay: "640ms" }}
-          >
-            <span className="inline-flex items-center gap-2 rounded-full border border-brand/15 bg-white/80 px-3 py-2 font-semibold text-brand-strong shadow-sm">
-              <ShieldCheck size={14} />
-              Secure healthcare portal
-            </span>
-            <span>•</span>
-            <span>Pharmacist-guided service with clear communication</span>
+          {/* FLOATING PILL DECORATION */}
+          <div aria-hidden="true" className="pointer-events-none relative ml-0 mt-12 hidden h-28 w-80 sm:ml-12 sm:mt-14 sm:block sm:w-96 lg:mr-4 lg:w-auto lg:absolute lg:inset-y-0 lg:right-0 lg:max-w-none">
+            {floatingPills.map((pill) => (
+              <div
+                key={pill.emoji}
+                className={`absolute pill-float text-5xl sm:text-6xl`}
+                style={pill.style}
+              >
+                {pill.emoji}
+              </div>
+            ))}
           </div>
         </div>
 
-        {/* RIGHT IMAGE */}
-        <div className="relative z-10 lg:flex lg:flex-col lg:justify-center lg:py-6">
-          <div className="absolute inset-4 rounded-[2.35rem] border border-white/70 bg-white/70 shadow-[0_24px_60px_rgba(15,23,42,0.08)] lg:inset-8" />
+        {/* RIGHT ART — interactive prescription journey */}
+        <div className="relative flex min-h-[420px] items-center overflow-hidden rounded-3xl bg-[#0B2B26] shadow-xl ring-1 ring-white/50 sm:min-h-[480px] lg:min-h-[560px] lg:shadow-[0_30px_70px_-20px_rgba(18,166,127,0.28)]">
+          <img
+            src="/ai/hero-medicine.svg"
+            alt=""
+            aria-hidden="true"
+            className="absolute inset-0 h-full w-full object-cover opacity-75"
+            loading="lazy"
+          />
+          <div aria-hidden="true" className="absolute inset-0 bg-[linear-gradient(145deg,rgba(5,38,34,0.2),rgba(5,38,34,0.76))]" />
 
-          <div className="relative isolate animate-rise animate-lift overflow-hidden rounded-[2.35rem] border border-[#dbe7e4] bg-white shadow-[0_24px_60px_rgba(15,23,42,0.12)] lg:min-h-[680px] xl:min-h-[740px]">
-            <div className="absolute left-4 top-4 z-20 inline-flex items-center gap-2 rounded-full border border-white/70 bg-white/90 px-3 py-2 text-[11px] font-bold uppercase tracking-[0.14em] text-brand-strong shadow-sm backdrop-blur">
-              <ShieldCheck size={14} className="text-brand" />
-              Pharmacist verified
-            </div>
-
-            <div className="absolute inset-0 z-[1] bg-[linear-gradient(180deg,rgba(255,255,255,0.06)_0%,rgba(255,255,255,0)_38%,rgba(15,23,42,0.06)_100%)]" />
-
-            <img
-              className="absolute inset-0 z-0 h-full w-full object-cover transition duration-700 hover:scale-[1.03]"
-              src="/hero.png"
-              alt="Pharmacist preparing a medicine order"
-            />
-
-            <div className="absolute bottom-5 left-5 right-5 z-20 hidden gap-3 lg:grid lg:grid-cols-3">
-              <div className="rounded-2xl border border-white/70 bg-white/90 px-4 py-3 shadow-sm backdrop-blur">
-                <p className="text-[10px] font-bold uppercase tracking-[0.14em] text-brand-strong">
-                  Delivery
-                </p>
-                <p className="mt-1 text-sm font-semibold text-[#0F172A]">
-                  Free within 5 km
-                </p>
+          <div className="relative z-10 mx-auto w-full max-w-[520px] p-4 sm:p-8 lg:p-10">
+            <div className="mb-5 flex items-center justify-between text-white">
+              <div>
+                <p className="text-[10px] font-bold uppercase tracking-[0.2em] text-emerald-200">The Panchawati difference</p>
+                <h2 className="mt-1 text-xl font-bold sm:text-2xl">Care that stays personal</h2>
               </div>
-
-              <div className="rounded-2xl border border-white/70 bg-white/90 px-4 py-3 shadow-sm backdrop-blur">
-                <p className="text-[10px] font-bold uppercase tracking-[0.14em] text-sky">
-                  Review
-                </p>
-                <p className="mt-1 text-sm font-semibold text-[#0F172A]">
-                  Pharmacist checked
-                </p>
-              </div>
-
-              <div className="rounded-2xl border border-white/70 bg-white/90 px-4 py-3 shadow-sm backdrop-blur">
-                <p className="text-[10px] font-bold uppercase tracking-[0.14em] text-amber">
-                  Packaging
-                </p>
-                <p className="mt-1 text-sm font-semibold text-[#0F172A]">
-                  Secure and careful
-                </p>
+              <div className="flex h-10 w-10 items-center justify-center rounded-2xl bg-white/15 text-emerald-200 backdrop-blur-sm">
+                <CheckCircle2 size={20} />
               </div>
             </div>
+
+            <div className="rounded-[1.75rem] border border-white/20 bg-white/95 p-5 shadow-2xl shadow-black/20 sm:p-6">
+              <div className="flex items-start justify-between gap-4">
+                <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-brand-soft text-brand-strong">
+                  <ActiveIcon size={23} />
+                </div>
+                <span className="rounded-full bg-brand-soft px-3 py-1.5 text-[10px] font-bold uppercase tracking-[0.12em] text-brand-strong">{activeMoment.status}</span>
+              </div>
+              <p className="mt-5 text-xs font-bold uppercase tracking-[0.16em] text-brand">A better pharmacy experience</p>
+              <h3 className="mt-2 text-2xl font-bold text-[#0B2B26]">{activeMoment.title}</h3>
+              <p className="mt-2 text-sm leading-6 text-slate-600">{activeMoment.copy}</p>
+
+              <div className="mt-6 grid gap-2 sm:grid-cols-3">
+                {careMoments.map((moment, index) => {
+                  const MomentIcon = moment.icon;
+                  const isActive = activeCare === index;
+                  return (
+                    <button
+                      key={moment.label}
+                      type="button"
+                      onClick={() => setActiveCare(index)}
+                      aria-label={`Show ${moment.label}`}
+                      className={`flex min-h-[68px] items-center gap-2 rounded-2xl border px-3 py-2 text-left transition ${isActive ? "border-brand bg-brand-soft text-brand-strong shadow-sm" : "border-slate-200 bg-white text-slate-500 hover:border-brand/30 hover:bg-brand-soft/50"}`}
+                    >
+                      <MomentIcon size={16} className="shrink-0" />
+                      <span className="text-[11px] font-bold leading-4">{moment.label}</span>
+                    </button>
+                  );
+                })}
+              </div>
+            </div>
+
+            <button
+              type="button"
+              onClick={() => navigate("/order")}
+              className="mt-5 inline-flex items-center gap-2 text-sm font-bold text-white transition hover:text-emerald-200"
+            >
+              Start your order <ChevronRight size={17} />
+            </button>
           </div>
         </div>
       </div>
     </section>
-  )
-}
+  );
+};
 
-export default Herosection
+export default Herosection;
