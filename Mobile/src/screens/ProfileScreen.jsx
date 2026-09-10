@@ -258,7 +258,7 @@ export default function ProfileScreen() {
       <View style={styles.wrap}>
         <ScreenHeader
           title="My Profile"
-          subtitle="Panchawati Meds"
+          subtitle="Panchawati Medical"
         />
 
         <View style={styles.loginContainer}>
@@ -295,7 +295,7 @@ export default function ProfileScreen() {
       <View style={styles.wrap}>
         <ScreenHeader
           title="My Profile"
-          subtitle="Panchawati Meds"
+          subtitle="Panchawati Medical"
         />
 
         <View style={styles.center}>
@@ -311,7 +311,7 @@ export default function ProfileScreen() {
     <View style={styles.wrap}>
       <ScreenHeader
         title="My Profile"
-        subtitle="Panchawati Meds"
+        subtitle="Panchawati Medical"
         right={
           <Pressable
             style={styles.logoutBtn}

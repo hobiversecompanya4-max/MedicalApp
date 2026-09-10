@@ -79,7 +79,7 @@ function Register() {
           </div>
 
           <h1 className="text-3xl font-bold text-gray-900">
-            Panchawati <span className="text-brand">Meds</span>
+            Panchawati <span className="text-brand">Medical</span>
           </h1>
 
           <p className="mt-2 text-sm text-gray-500">
@@ -96,7 +96,7 @@ function Register() {
             </h2>
 
             <p className="mt-1 text-sm text-gray-500">
-              Join Panchawati Meds and manage your healthcare with ease.
+              Join Panchawati Medical and manage your healthcare with ease.
             </p>
           </div>
 

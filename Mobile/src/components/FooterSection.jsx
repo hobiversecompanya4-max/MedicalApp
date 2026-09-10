@@ -46,7 +46,7 @@ export default function FooterSection() {
       <View style={styles.brandRow}>
         <Image source={require("../../assets/logo.png")} style={styles.logo} />
         <Text style={styles.brandName}>
-          Panchawati <Text style={styles.brandAccent}>Meds</Text>
+          Panchawati <Text style={styles.brandAccent}>Medical</Text>
         </Text>
       </View>
 
@@ -80,7 +80,7 @@ export default function FooterSection() {
       <Text style={styles.heading}>Patient Information</Text>
       <Text style={styles.disclaimer}>
         Prescription medicines require a valid prescription from a licensed
-        healthcare professional. Panchawati Meds is not a substitute for
+        healthcare professional. Panchawati Medical is not a substitute for
         professional medical advice.
       </Text>
 
@@ -96,7 +96,7 @@ export default function FooterSection() {
 
       <View style={styles.bottomBar}>
         <Text style={styles.copyright}>
-          © {new Date().getFullYear()} Panchawati Meds. All rights reserved.
+          © {new Date().getFullYear()} Panchawati Medical. All rights reserved.
         </Text>
         <Text style={styles.meta}>Maintained by hobiverse.companyA4</Text>
       </View>

@@ -78,7 +78,7 @@ export default function RegisterScreen() {
               <Image source={require("../../assets/logo.png")} style={styles.logo} />
             </View>
             <Text style={styles.brandName}>
-              Panchawati <Text style={styles.brandAccent}>Meds</Text>
+              Panchawati <Text style={styles.brandAccent}>Medical</Text>
             </Text>
             <Text style={styles.brandTagline}>
               Your trusted partner for medicines & healthcare
@@ -89,7 +89,7 @@ export default function RegisterScreen() {
           <View style={styles.card}>
             <Text style={styles.cardTitle}>Create your account</Text>
             <Text style={styles.cardSubtitle}>
-              Join Panchawati Meds and manage your healthcare with ease.
+              Join Panchawati Medical and manage your healthcare with ease.
             </Text>
 
             <Field

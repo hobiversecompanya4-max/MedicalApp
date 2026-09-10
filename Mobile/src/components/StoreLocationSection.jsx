@@ -18,7 +18,7 @@ export default function StoreLocationSection() {
         <Text style={styles.badgeText}>Visit our store</Text>
       </View>
 
-      <Text style={styles.title}>Find Panchawati Meds Near You</Text>
+      <Text style={styles.title}>Find Panchawati Medical Near You</Text>
 
       <Text style={styles.description}>
         Prefer to visit us in person? Our medical store is available for customers
@@ -32,7 +32,7 @@ export default function StoreLocationSection() {
             <Ionicons name="location" size={18} color={colors.brandStrong} />
           </View>
           <View style={styles.infoTextWrap}>
-            <Text style={styles.infoTitle}>Panchawati Meds Medical Store</Text>
+            <Text style={styles.infoTitle}>Panchawati Medical Store</Text>
             <Text style={styles.infoText}>
               Visit our store using the location provided on Google Maps.
             </Text>
@@ -66,7 +66,7 @@ export default function StoreLocationSection() {
           <Ionicons name="location" size={26} color={colors.white} />
         </View>
         <View style={styles.mapLabel}>
-          <Text style={styles.mapLabelTitle}>Panchawati Meds Medical Store</Text>
+          <Text style={styles.mapLabelTitle}>Panchawati Medical Store</Text>
           <Text style={styles.mapLabelSub}>Open location in Google Maps</Text>
         </View>
       </View>

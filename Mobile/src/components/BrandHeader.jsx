@@ -24,7 +24,7 @@ export default function BrandHeader() {
 
           <View>
             <Text style={styles.eyebrow}>Digital Pharmacy</Text>
-            <Text style={styles.brandName}>Panchawati Meds</Text>
+            <Text style={styles.brandName}>Panchawati Medical</Text>
           </View>
         </View>
 

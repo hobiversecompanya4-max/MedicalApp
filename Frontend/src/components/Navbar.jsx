@@ -30,7 +30,7 @@ const Navbar = () => {
         >
           <img
             src="/logo.png"
-            alt="Panchawati Meds logo"
+            alt="Panchawati Medical logo"
             className="h-11 w-11 rounded-2xl object-contain transition-transform duration-300 group-hover:scale-105"
           />
 
@@ -39,7 +39,7 @@ const Navbar = () => {
               Digital Pharmacy
             </span>
             <span className="block text-[17px] text-brand-strong sm:text-xl">
-              Panchawati Meds
+              Panchawati Medical
             </span>
           </span>
         </a>

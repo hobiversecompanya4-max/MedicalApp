@@ -33,6 +33,20 @@
   animation: sheen 4.5s linear infinite;
 }
 
+.customer-experience-mask {
+  overflow: hidden;
+  mask-image: linear-gradient(to right, transparent, black 8%, black 92%, transparent);
+  -webkit-mask-image: linear-gradient(to right, transparent, black 8%, black 92%, transparent);
+}
+
+.customer-experience-track {
+  animation: customer-experience-scroll 58s linear infinite;
+}
+
+.customer-experience-track:hover {
+  animation-play-state: paused;
+}
+
 @keyframes rise-in {
   from {
     opacity: 0;
@@ -66,6 +80,16 @@
   }
 }
 
+@keyframes customer-experience-scroll {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(calc(-50% - 0.5rem));
+  }
+}
+
 @keyframes bg-sweep {
   0% {
     background-position: 0% 0%, 100% 0%, 0% 100%, 100% 100%;
@@ -86,6 +110,32 @@
   }
 }
 
+@keyframes aurora-drift {
+  0%,
+  100% {
+    background-position: 0% 15%, 100% 0%, 30% 100%, 70% 40%;
+    transform: scale(1) rotate(0deg);
+  }
+
+  50% {
+    background-position: 58% 65%, 42% 25%, 75% 45%, 20% 80%;
+    transform: scale(1.08) rotate(1deg);
+  }
+}
+
+@keyframes ambient-glow {
+  0%,
+  100% {
+    opacity: 0.42;
+    transform: translate3d(-2%, 0, 0) scale(1);
+  }
+
+  50% {
+    opacity: 0.68;
+    transform: translate3d(2%, 2%, 0) scale(1.06);
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
   .animate-rise,
   .animate-rise-delay,
@@ -97,9 +147,16 @@
     transition: none !important;
   }
 
+  .customer-experience-track {
+    animation: none !important;
+    transform: translateX(0) !important;
+  }
+
   body,
   .page-grid,
-  .site-ambient {
+  .site-ambient,
+  .site-ambient::before,
+  .site-ambient::after {
     animation: none !important;
   }
 

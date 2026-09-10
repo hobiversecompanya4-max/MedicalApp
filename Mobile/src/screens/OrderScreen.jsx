@@ -47,7 +47,7 @@ export default function OrderScreen() {
 
   return (
     <View style={styles.wrap}>
-      <ScreenHeader title="Order Medicine" subtitle="Panchawati Meds" />
+      <ScreenHeader title="Order Medicine" subtitle="Panchawati Medical" />
       <OrderMedicineForm />
     </View>
   );

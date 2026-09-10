@@ -18,7 +18,7 @@ const StoreLocation = () => {
             </p>
 
             <h2 className="font-[Plus_Jakarta_Sans] text-[28px] font-semibold leading-tight tracking-[-0.5px] text-[#0F172A] sm:text-[34px]">
-              Find Panchawati Meds Near You
+              Find Panchawati Medical Near You
             </h2>
 
             <p className="mt-4 max-w-[520px] text-sm leading-6 text-[var(--text)]">
@@ -35,7 +35,7 @@ const StoreLocation = () => {
 
                 <div>
                   <h3 className="text-sm font-semibold text-[#0F172A]">
-                    Panchawati Meds Medical Store
+                    Panchawati Medical Store
                   </h3>
 
                   <p className="mt-1 text-xs leading-5 text-[var(--text)]">
@@ -96,7 +96,7 @@ const StoreLocation = () => {
 
                 <div className="animate-lift mt-3 rounded-2xl border border-[#dbe7e4] bg-white/95 px-4 py-3 text-center shadow-md backdrop-blur-sm">
                   <p className="text-xs font-bold text-[#0F172A]">
-                    Panchawati Meds Medical Store
+                    Panchawati Medical Store
                   </p>
                   <p className="mt-0.5 text-[10px] text-[#64748B]">
                     Open location in Google Maps

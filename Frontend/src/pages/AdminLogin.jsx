@@ -70,7 +70,7 @@ const AdminLogin = () => {
           </div>
 
           <h1 className="text-3xl font-bold text-gray-900">
-            Panchawati <span className="text-brand">Meds</span>
+            Panchawati <span className="text-brand">Medical</span>
           </h1>
 
           <div className="mt-2 inline-flex items-center rounded-full bg-brand-soft px-3 py-1">

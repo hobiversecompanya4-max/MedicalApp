@@ -54,7 +54,7 @@ export default function AdminLoginScreen() {
     <View style={styles.wrap}>
       <ScreenHeader
         title="Admin Portal"
-        subtitle="Panchawati Meds"
+        subtitle="Panchawati Medical"
         onBack={() => navigation.goBack()}
       />
       <SafeAreaView style={styles.safe} edges={["bottom"]}>
@@ -72,7 +72,7 @@ export default function AdminLoginScreen() {
                 <Image source={require("../../assets/logo.png")} style={styles.logo} />
               </View>
               <Text style={styles.brandName}>
-                Panchawati <Text style={styles.brandAccent}>Meds</Text>
+                Panchawati <Text style={styles.brandAccent}>Medical</Text>
               </Text>
               <View style={styles.adminBadge}>
                 <Text style={styles.adminBadgeText}>ADMIN PORTAL</Text>

@@ -1,5 +1,3 @@
-import React from "react";
-
 const Footer = () => {
   return (
     <footer className="animate-rise border-t border-brand/15 bg-[linear-gradient(180deg,rgba(251,254,254,0.86),rgba(238,245,244,0.9))] px-6 py-10 text-[#0F172A] sm:px-10 backdrop-blur-sm">
@@ -10,12 +8,12 @@ const Footer = () => {
           <div className="flex items-center gap-3">
             <img
               src="/logo.png"
-              alt="Panchawati Meds"
+              alt="Panchawati Medical"
               className="h-9 w-auto"
             />
             <h2 className="font-[Plus_Jakarta_Sans] text-base font-bold">
               <span className="text-[#0F172A]">Panchawati</span>{" "}
-              <span className="text-brand">Meds</span>
+              <span className="text-brand">Medical</span>
             </h2>
           </div>
 
@@ -50,13 +48,13 @@ const Footer = () => {
               Order Medicine
             </a>
             <a
-              href="/#safety"
+              href="/safety"
               className="transition hover:text-brand"
             >
               Safety & Verification
             </a>
             <a
-              href="/#contact"
+              href="/contact"
               className="transition hover:text-brand"
             >
               Contact
@@ -91,7 +89,7 @@ const Footer = () => {
 
           <p className="mt-4 text-xs leading-5 text-[#475569]">
             Prescription medicines require a valid prescription from a
-            licensed healthcare professional. Panchawati Meds is not a substitute
+            licensed healthcare professional. Panchawati Medical is not a substitute
             for professional medical advice.
           </p>
 
@@ -109,7 +107,7 @@ const Footer = () => {
 
         <div className="space-y-1">
           <p>
-            © {new Date().getFullYear()} Panchawati Meds. All rights reserved.
+            © {new Date().getFullYear()} Panchawati Medical. All rights reserved.
           </p>
 
           <p>
@@ -125,15 +123,15 @@ const Footer = () => {
           className="flex flex-wrap gap-x-5 gap-y-2"
           aria-label="Footer navigation"
         >
-          <a href="#privacy" className="transition hover:text-brand">
+          <a href="/privacy" className="transition hover:text-brand">
             Privacy Policy
           </a>
 
-          <a href="#terms" className="transition hover:text-brand">
+          <a href="/terms" className="transition hover:text-brand">
             Terms of Service
           </a>
 
-          <a href="#safety" className="transition hover:text-brand">
+          <a href="/safety-guidelines" className="transition hover:text-brand">
             Safety Guidelines
           </a>
         </nav>
