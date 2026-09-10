@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useMemo } from "react";
 import {
   ArrowRight,
   BadgePercent,
@@ -13,6 +13,7 @@ import {
   Truck,
 } from "lucide-react";
 import { useNavigate } from "react-router-dom";
+import { useLanguage } from "../context/LanguageContext";
 
 const highlights = [
   {
@@ -82,8 +83,9 @@ const careMoments = [
 
 const Herosection = () => {
   const navigate = useNavigate();
-  const [activeCare, setActiveCare] = React.useState(1);
-  const activeMoment = careMoments[activeCare];
+  const { t } = useLanguage();
+  const [activeCare, setActiveCare] = React.useState(0);
+  const activeMoment = useMemo(() => careMoments[activeCare] || careMoments[0], [activeCare]);
   const ActiveIcon = activeMoment.icon;
 
   return (
@@ -143,8 +145,8 @@ const Herosection = () => {
                   >
                     <Icon size={18} />
                   </div>
-                  <h3 className="text-sm font-bold text-[#0B2B26]">{item.title}</h3>
-                  <p className="mt-1 text-xs leading-5 text-[var(--text)]">{item.copy}</p>
+                  <h3 className="text-sm font-bold text-[#0B2B26]">{t(item.title)}</h3>
+                  <p className="mt-1 text-xs leading-5 text-[var(--text)]">{t(item.copy)}</p>
                 </div>
               );
             })}
@@ -210,11 +212,11 @@ const Herosection = () => {
                 <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-brand-soft text-brand-strong">
                   <ActiveIcon size={23} />
                 </div>
-                <span className="rounded-full bg-brand-soft px-3 py-1.5 text-[10px] font-bold uppercase tracking-[0.12em] text-brand-strong">{activeMoment.status}</span>
+                <span className="rounded-full bg-brand-soft px-3 py-1.5 text-[10px] font-bold uppercase tracking-[0.12em] text-brand-strong">{t(activeMoment.status)}</span>
               </div>
               <p className="mt-5 text-xs font-bold uppercase tracking-[0.16em] text-brand">A better pharmacy experience</p>
-              <h3 className="mt-2 text-2xl font-bold text-[#0B2B26]">{activeMoment.title}</h3>
-              <p className="mt-2 text-sm leading-6 text-slate-600">{activeMoment.copy}</p>
+              <h3 className="mt-2 text-2xl font-bold text-[#0B2B26]">{t(activeMoment.title)}</h3>
+              <p className="mt-2 text-sm leading-6 text-slate-600">{t(activeMoment.copy)}</p>
 
               <div className="mt-6 grid gap-2 sm:grid-cols-3">
                 {careMoments.map((moment, index) => {
@@ -225,11 +227,11 @@ const Herosection = () => {
                       key={moment.label}
                       type="button"
                       onClick={() => setActiveCare(index)}
-                      aria-label={`Show ${moment.label}`}
+                      aria-label={`${t("Show")} ${t(moment.label)}`}
                       className={`flex min-h-[68px] items-center gap-2 rounded-2xl border px-3 py-2 text-left transition ${isActive ? "border-brand bg-brand-soft text-brand-strong shadow-sm" : "border-slate-200 bg-white text-slate-500 hover:border-brand/30 hover:bg-brand-soft/50"}`}
                     >
                       <MomentIcon size={16} className="shrink-0" />
-                      <span className="text-[11px] font-bold leading-4">{moment.label}</span>
+                      <span className="text-[11px] font-bold leading-4">{t(moment.label)}</span>
                     </button>
                   );
                 })}

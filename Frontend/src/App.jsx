@@ -14,6 +14,7 @@ import PrivacyPolicy from "./pages/PrivacyPolicy.jsx";
 import TermsOfService from "./pages/TermsOfService.jsx";
 import SafetyGuidelines from "./pages/SafetyGuidelines.jsx";
 import ScrollProgress from "./components/ScrollProgress";
+import { LanguageProvider } from "./context/LanguageContext";
 
 function App() {
   useEffect(() => {
@@ -26,9 +27,10 @@ function App() {
       });
   }, []);
   return (
-    <BrowserRouter>
-      <ScrollProgress />
-      <Routes>
+    <LanguageProvider>
+      <BrowserRouter>
+        <ScrollProgress />
+        <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/order" element={<Order />} />
         <Route path="/contact" element={<Contact />} />
@@ -41,8 +43,9 @@ function App() {
         <Route path="/profile" element={<Profile />} />
         <Route path="/admin/login" element={<AdminLogin />} />
         <Route path="/admin" element={<Admin />} />
-      </Routes>
-    </BrowserRouter>
+        </Routes>
+      </BrowserRouter>
+    </LanguageProvider>
   );
 }
 export default App;

@@ -1,11 +1,13 @@
-import { Activity, LogOut, Menu, PhoneCall, UserRound, X } from 'lucide-react'
+import { Activity, Languages, LogOut, Menu, PhoneCall, UserRound, X } from 'lucide-react'
 import { useState } from 'react'
 import { NavLink, useNavigate } from 'react-router-dom'
 import { isLoggedIn, logout } from '../services/auth'
+import { useLanguage } from '../context/LanguageContext'
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
   const navigate = useNavigate()
+  const { isHindi, toggleLanguage } = useLanguage()
 
   const navLinks = [
     { label: 'Home', to: '/' },
@@ -76,6 +78,16 @@ const Navbar = () => {
             Call Pharmacist
           </a>
 
+          <button
+            type="button"
+            onClick={toggleLanguage}
+            aria-label={isHindi ? 'Switch to English' : 'हिंदी में बदलें'}
+            className="inline-flex items-center gap-2 rounded-full border border-brand/20 bg-white px-3 py-2 text-sm font-bold text-brand-strong transition hover:-translate-y-[1px] hover:bg-brand-soft"
+          >
+            <Languages size={16} />
+            {isHindi ? 'EN' : 'हिंदी'}
+          </button>
+
           {loggedIn ? (
             <>
               <button
@@ -127,16 +139,29 @@ const Navbar = () => {
           )}
         </div>
 
-        {/* Hamburger */}
-        <button
-          type="button"
-          aria-label="Toggle navigation menu"
-          aria-expanded={isMenuOpen}
-          onClick={() => setIsMenuOpen((prev) => !prev)}
-          className="inline-flex h-11 w-11 items-center justify-center rounded-full border border-slate-200 bg-white text-slate-700 shadow-sm transition hover:border-brand/20 hover:text-brand-strong focus:outline-none focus:ring-2 focus:ring-brand sm:hidden"
-        >
-          {isMenuOpen ? <X size={20} /> : <Menu size={20} />}
-        </button>
+        <div className="flex items-center gap-1 sm:hidden">
+          {/* Mobile language toggle */}
+          <button
+            type="button"
+            onClick={toggleLanguage}
+            aria-label={isHindi ? 'Switch to English' : 'हिंदी में बदलें'}
+            className="inline-flex h-11 items-center justify-center gap-1.5 rounded-full border border-brand/20 bg-white px-3 text-xs font-bold text-brand-strong shadow-sm transition hover:border-brand/30 hover:bg-brand-soft focus:outline-none focus:ring-2 focus:ring-brand"
+          >
+            <Languages size={17} />
+            {isHindi ? 'EN' : 'हिंदी'}
+          </button>
+
+          {/* Hamburger */}
+          <button
+            type="button"
+            aria-label={isHindi ? 'नेविगेशन मेन्यू बदलें' : 'Toggle navigation menu'}
+            aria-expanded={isMenuOpen}
+            onClick={() => setIsMenuOpen((prev) => !prev)}
+            className="inline-flex h-11 w-11 items-center justify-center rounded-full border border-slate-200 bg-white text-slate-700 shadow-sm transition hover:border-brand/20 hover:text-brand-strong focus:outline-none focus:ring-2 focus:ring-brand"
+          >
+            {isMenuOpen ? <X size={20} /> : <Menu size={20} />}
+          </button>
+        </div>
 
         {/* Mobile Navigation */}
         <div
