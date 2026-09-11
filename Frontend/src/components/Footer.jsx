@@ -112,13 +112,6 @@ const Footer = () => {
             Designed, Developed and hosted by hobiverse.companyA4
           </p>
 
-          <p>
-            Last updated: {new Date().toLocaleString(undefined, {
-              dateStyle: "medium",
-              timeStyle: "short",
-            })}
-          </p>
-
         </div>
 
         <nav
